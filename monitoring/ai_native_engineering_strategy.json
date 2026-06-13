@@ -1,0 +1,274 @@
+{
+  "site": {
+    "title": "AI Native 工程雷达",
+    "tagline": "面向客户端架构负责人的 AI 软件工程情报站",
+    "description": "聚焦从传统客户端架构向 AI Native 软件工程架构演进所需的工程效率、AI Agent、Code Intelligence、代码理解、研发效能与工程自动化。",
+    "audience": "大型互联网公司的客户端架构负责人",
+    "updateCadence": "P0 信号高频发现，P1/P2 内容沉淀到每日归档。"
+  },
+  "focusAreas": [
+    {
+      "id": "ai-for-se",
+      "level": "A",
+      "label": "AI for Software Engineering",
+      "description": "AI Coding、Agentic Coding、代码审查、调试、重构与仓库理解等直接提升软件工程效率的能力。",
+      "keywords": [
+        "AI Software Engineering",
+        "AI Coding",
+        "Agentic Coding",
+        "Code Intelligence",
+        "AI Code Review",
+        "Repository Understanding",
+        "AI Debugging",
+        "AI Refactoring",
+        "Claude Code",
+        "coding agent",
+        "code review",
+        "debugging",
+        "refactoring",
+        "repository",
+        "codebase"
+      ],
+      "companies": ["OpenAI", "Anthropic", "Google DeepMind", "GitHub", "Cursor", "Cognition AI"]
+    },
+    {
+      "id": "agent-systems",
+      "level": "A",
+      "label": "Agent Systems",
+      "description": "关注 Agent Infra、工具调用、多 Agent 协作、MCP、Agent Memory、Runtime 与 Evaluation，而不是应用层包装。",
+      "keywords": [
+        "AI Agent",
+        "Multi Agent",
+        "Agent Workflow",
+        "Tool Use",
+        "MCP",
+        "Agent Memory",
+        "Agent Evaluation",
+        "Agent Runtime",
+        "agent",
+        "agents",
+        "agentic",
+        "subagent",
+        "workflow",
+        "tools",
+        "memory",
+        "runtime"
+      ],
+      "companies": ["OpenAI", "Anthropic", "Google DeepMind", "GitHub", "Cursor", "Cognition AI"]
+    },
+    {
+      "id": "code-intelligence",
+      "level": "A",
+      "label": "Code Intelligence",
+      "description": "代码图、程序依赖图、静态/动态分析、仓库图谱、影响面分析与调用链理解。",
+      "keywords": [
+        "Code Graph",
+        "CPG",
+        "PDG",
+        "Static Analysis",
+        "Dynamic Analysis",
+        "Repository Graph",
+        "Impact Analysis",
+        "Dependency Analysis",
+        "Call Graph",
+        "program analysis",
+        "static analysis",
+        "dynamic analysis"
+      ],
+      "companies": []
+    },
+    {
+      "id": "se-research",
+      "level": "A",
+      "label": "Software Engineering Research",
+      "description": "ICSE、FSE、ASE 以及 AI4SE、SE4AI、Program Analysis、Testing、Verification 方向的研究进展。",
+      "keywords": [
+        "International Conference on Software Engineering",
+        "Foundations of Software Engineering",
+        "Automated Software Engineering",
+        "ICSE",
+        "FSE",
+        "ASE",
+        "AI4SE",
+        "SE4AI",
+        "Program Analysis",
+        "Testing",
+        "Verification",
+        "benchmark paper"
+      ],
+      "companies": []
+    },
+    {
+      "id": "evaluation-systems",
+      "level": "A",
+      "label": "Evaluation Systems",
+      "description": "Benchmark、Ground Truth、Synthetic Data、LLM Judge 与 Agent Evals，用于衡量 Agent 是否真正有效。",
+      "keywords": [
+        "Benchmark",
+        "Evaluation",
+        "Ground Truth",
+        "Synthetic Data",
+        "LLM Judge",
+        "Evals",
+        "eval",
+        "measure",
+        "test harness",
+        "harness"
+      ],
+      "companies": []
+    },
+    {
+      "id": "client-infra",
+      "level": "B",
+      "label": "客户端基础架构",
+      "description": "Android、iOS、KMP、OpenHarmony、Flutter、React Native 中能被 AI 改造的软件工程问题。",
+      "keywords": [
+        "Android Architecture",
+        "iOS Architecture",
+        "KMP",
+        "OpenHarmony",
+        "Flutter",
+        "React Native",
+        "client architecture",
+        "mobile architecture"
+      ],
+      "companies": []
+    },
+    {
+      "id": "engineering-platform",
+      "level": "B",
+      "label": "大规模工程实践",
+      "description": "Monorepo、CI/CD、Developer Productivity、Engineering Platform 与 Internal Developer Platform。",
+      "keywords": [
+        "Monorepo",
+        "CI/CD",
+        "Developer Productivity",
+        "Engineering Platform",
+        "Internal Developer Platform",
+        "developer experience",
+        "productivity",
+        "platform engineering"
+      ],
+      "companies": []
+    },
+    {
+      "id": "knowledge-engineering",
+      "level": "B",
+      "label": "RAG 与知识工程",
+      "description": "Knowledge Graph、GraphRAG、Hybrid Retrieval、Long Context 与 Repository Memory。",
+      "keywords": [
+        "Knowledge Graph",
+        "GraphRAG",
+        "Hybrid Retrieval",
+        "Long Context",
+        "Repository Memory",
+        "retrieval",
+        "context management",
+        "1M context"
+      ],
+      "companies": []
+    },
+    {
+      "id": "foundation-models",
+      "level": "C",
+      "label": "Foundation Model",
+      "description": "仅关注 Coding Model、Agent Model、Long Context Model 对代码理解和 Agent 工程的实际影响。",
+      "keywords": [
+        "Coding Model",
+        "Agent Model",
+        "Long Context Model",
+        "foundation model",
+        "long context",
+        "model launch"
+      ],
+      "companies": ["OpenAI", "Anthropic", "Google DeepMind"]
+    }
+  ],
+  "priorityRules": [
+    {
+      "id": "P0",
+      "label": "P0 立即跟进",
+      "description": "新的 Coding Agent、Claude Code / Cursor 重大更新、Agent Runtime 架构、仓库理解论文、ICSE/FSE/ASE 最佳论文或 AI4SE 重大突破。",
+      "triggers": [
+        "new coding agent",
+        "coding agent",
+        "Claude Code",
+        "Cursor",
+        "Agent Runtime",
+        "Repository Understanding",
+        "ICSE best paper",
+        "FSE best paper",
+        "ASE best paper",
+        "AI4SE",
+        "agentic coding",
+        "codebase",
+        "repository"
+      ]
+    },
+    {
+      "id": "P1",
+      "label": "P1 每日研判",
+      "description": "软件工程论文、Agent Infra 实践、Code Intelligence 实践、企业级 AI Coding 案例。",
+      "triggers": [
+        "software engineering",
+        "Agent Infra",
+        "Code Intelligence",
+        "enterprise",
+        "AI Coding",
+        "developer productivity",
+        "engineering org",
+        "case study",
+        "best practices"
+      ]
+    },
+    {
+      "id": "P2",
+      "label": "P2 收藏观察",
+      "description": "普通 LLM 更新、普通 Agent 文章、一般 RAG 内容，仅在与 AI 软件工程有明确关联时进入收藏。",
+      "triggers": ["LLM update", "agent article", "RAG", "model update", "chat model"]
+    }
+  ],
+  "lowerPriorityFilters": [
+    "AI 绘画",
+    "AI 视频",
+    "AI 营销",
+    "Prompt Engineering 技巧",
+    "普通大模型新闻",
+    "一般创业融资新闻",
+    "ChatGPT 使用技巧",
+    "普通前端框架更新",
+    "普通移动开发教程"
+  ],
+  "watchSources": [
+    {
+      "name": "Anthropic / Claude Blog",
+      "url": "https://claude.com/blog",
+      "coverage": "Claude Code、Agent、MCP、企业 AI Coding 与工程实践"
+    },
+    {
+      "name": "OpenAI News / Research",
+      "url": "https://openai.com/news/",
+      "coverage": "Coding Agent、模型能力、Evals 与软件工程相关 API"
+    },
+    {
+      "name": "Google DeepMind Blog",
+      "url": "https://deepmind.google/discover/blog/",
+      "coverage": "Agent、代码模型、研究突破"
+    },
+    {
+      "name": "GitHub Blog / Changelog",
+      "url": "https://github.blog/",
+      "coverage": "Copilot、代码审查、开发者平台与工程效率"
+    },
+    {
+      "name": "Cursor / Cognition AI",
+      "url": "https://www.cursor.com/changelog",
+      "coverage": "AI IDE、Coding Agent、软件工程工作流产品化"
+    },
+    {
+      "name": "ICSE / FSE / ASE / arXiv",
+      "url": "https://arxiv.org/",
+      "coverage": "AI4SE、SE4AI、Program Analysis、Testing、Verification"
+    }
+  ]
+}
