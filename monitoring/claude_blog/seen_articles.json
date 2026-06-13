@@ -1,0 +1,1496 @@
+{
+  "source": "https://claude.com/blog",
+  "baseline_captured_at": "2026-06-13T18:56:21+08:00",
+  "baseline_cutoff_note": "Treat Claude blog posts published before this capture as pre-existing unless the user explicitly requests backfill.",
+  "last_checked_at": "2026-06-13T13:58:43Z",
+  "current_frontier": {
+    "title": "The evolution of agentic surfaces: building with Claude Managed Agents",
+    "url": "https://claude.com/blog/building-with-claude-managed-agents",
+    "published_at": "2026-06-10"
+  },
+  "seen_article_urls": [
+    "https://claude.com/blog/1m-context",
+    "https://claude.com/blog/1m-context-ga",
+    "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code",
+    "https://claude.com/blog/agent-capabilities-api",
+    "https://claude.com/blog/agent-view-in-claude-code",
+    "https://claude.com/blog/auto-mode",
+    "https://claude.com/blog/automate-security-reviews-with-claude-code",
+    "https://claude.com/blog/behind-model-launch-what-customers-discovered-testing-claude-opus-4-6-early",
+    "https://claude.com/blog/best-practices-for-computer-and-browser-use-with-claude",
+    "https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork",
+    "https://claude.com/blog/best-practices-for-prompt-engineering",
+    "https://claude.com/blog/best-practices-for-using-claude-opus-4-7-with-claude-code",
+    "https://claude.com/blog/beyond-permission-prompts-making-claude-code-more-secure-and-autonomous",
+    "https://claude.com/blog/build-artifacts",
+    "https://claude.com/blog/build-responsive-web-layouts",
+    "https://claude.com/blog/building-agents-that-reach-production-systems-with-mcp",
+    "https://claude.com/blog/building-agents-with-skills-equipping-agents-for-specialized-work",
+    "https://claude.com/blog/building-agents-with-the-claude-agent-sdk",
+    "https://claude.com/blog/building-ai-agents-for-startups",
+    "https://claude.com/blog/building-ai-agents-for-the-enterprise",
+    "https://claude.com/blog/building-ai-agents-in-financial-services",
+    "https://claude.com/blog/building-ai-agents-in-healthcare-and-life-sciences",
+    "https://claude.com/blog/building-companies-with-claude-code",
+    "https://claude.com/blog/building-multi-agent-systems-when-and-how-to-use-them",
+    "https://claude.com/blog/building-with-claude-managed-agents",
+    "https://claude.com/blog/carta-healthcare-clinical-abstractor",
+    "https://claude.com/blog/claude-and-slack",
+    "https://claude.com/blog/claude-api-skill",
+    "https://claude.com/blog/claude-builds-visuals",
+    "https://claude.com/blog/claude-code-and-new-admin-controls-for-business-plans",
+    "https://claude.com/blog/claude-code-and-slack",
+    "https://claude.com/blog/claude-code-desktop-redesign",
+    "https://claude.com/blog/claude-code-on-the-web",
+    "https://claude.com/blog/claude-code-plugins",
+    "https://claude.com/blog/claude-code-remote-mcp",
+    "https://claude.com/blog/claude-excel-powerpoint-updates",
+    "https://claude.com/blog/claude-for-chrome",
+    "https://claude.com/blog/claude-for-foundation-models",
+    "https://claude.com/blog/claude-for-the-legal-industry",
+    "https://claude.com/blog/claude-managed-agents",
+    "https://claude.com/blog/claude-managed-agents-memory",
+    "https://claude.com/blog/claude-managed-agents-updates",
+    "https://claude.com/blog/claude-now-available-in-microsoft-365-copilot",
+    "https://claude.com/blog/claude-on-google-cloud-fedramp-high",
+    "https://claude.com/blog/claude-platform-compliance-api",
+    "https://claude.com/blog/claude-platform-on-aws",
+    "https://claude.com/blog/claude-powered-artifacts",
+    "https://claude.com/blog/claude-security-public-beta",
+    "https://claude.com/blog/claude-team-updates",
+    "https://claude.com/blog/code-review",
+    "https://claude.com/blog/code-w-claude-london-2026-rethinking-how-we-build",
+    "https://claude.com/blog/code-w-claude-sf-2026-sf",
+    "https://claude.com/blog/code-with-claude-san-francisco-london-tokyo",
+    "https://claude.com/blog/collaborate-with-claude-across-excel-powerpoint-word-and-outlook",
+    "https://claude.com/blog/common-workflow-patterns-for-ai-agents-and-when-to-use-them",
+    "https://claude.com/blog/complete-guide-to-building-skills-for-claude",
+    "https://claude.com/blog/compliance-api-security-partners",
+    "https://claude.com/blog/connectors-directory",
+    "https://claude.com/blog/connectors-for-everyday-life",
+    "https://claude.com/blog/context-management",
+    "https://claude.com/blog/contribution-metrics",
+    "https://claude.com/blog/cowork-for-enterprise",
+    "https://claude.com/blog/cowork-plugins",
+    "https://claude.com/blog/cowork-plugins-across-enterprise",
+    "https://claude.com/blog/cowork-plugins-finance",
+    "https://claude.com/blog/create-files",
+    "https://claude.com/blog/deploying-claude-across-financial-services",
+    "https://claude.com/blog/deploying-claude-across-the-legal-industry",
+    "https://claude.com/blog/dispatch-and-computer-use",
+    "https://claude.com/blog/driving-ai-transformation-with-claude",
+    "https://claude.com/blog/eight-trends-defining-how-software-gets-built-in-2026",
+    "https://claude.com/blog/extending-claude-capabilities-with-skills-mcp-servers",
+    "https://claude.com/blog/fix-software-bugs-faster-with-claude",
+    "https://claude.com/blog/harnessing-claudes-intelligence",
+    "https://claude.com/blog/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks",
+    "https://claude.com/blog/how-ai-helps-break-cost-barrier-cobol-modernization",
+    "https://claude.com/blog/how-an-anthropic-sales-leader-uses-claude-cowork-to-run-a-4-000-account-book",
+    "https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude",
+    "https://claude.com/blog/how-anthropic-teams-use-claude-code",
+    "https://claude.com/blog/how-anthropic-uses-claude-cybersecurity",
+    "https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering",
+    "https://claude.com/blog/how-anthropic-uses-claude-legal",
+    "https://claude.com/blog/how-anthropic-uses-claude-marketing",
+    "https://claude.com/blog/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers",
+    "https://claude.com/blog/how-brex-improves-code-quality-and-productivity-with-claude-code",
+    "https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start",
+    "https://claude.com/blog/how-coderabbit-used-claude-to-build-an-agent-orchestration-system",
+    "https://claude.com/blog/how-enterprises-are-building-ai-agents-in-2026",
+    "https://claude.com/blog/how-kepler-built-verifiable-ai-for-financial-services-with-claude",
+    "https://claude.com/blog/how-leading-retailers-are-turning-ai-pilots-into-enterprise-wide-transformation",
+    "https://claude.com/blog/how-our-partners-are-putting-opus-to-work-for-cybersecurity",
+    "https://claude.com/blog/how-to-configure-hooks",
+    "https://claude.com/blog/how-to-create-skills-key-steps-limitations-and-examples",
+    "https://claude.com/blog/improved-web-search-with-dynamic-filtering",
+    "https://claude.com/blog/improving-frontend-design-through-skills",
+    "https://claude.com/blog/improving-skill-creator-test-measure-and-refine-agent-skills",
+    "https://claude.com/blog/integrate-apis-seamlessly",
+    "https://claude.com/blog/integrations",
+    "https://claude.com/blog/interactive-tools-in-claude",
+    "https://claude.com/blog/introducing-citations-api",
+    "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+    "https://claude.com/blog/introducing-routines-in-claude-code",
+    "https://claude.com/blog/introduction-to-agentic-coding",
+    "https://claude.com/blog/key-benefits-transitioning-agentic-coding",
+    "https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills",
+    "https://claude.com/blog/lessons-from-building-claude-code-prompt-caching-is-everything",
+    "https://claude.com/blog/making-claude-a-better-electrical-engineer",
+    "https://claude.com/blog/max-plan",
+    "https://claude.com/blog/meet-the-winners-of-our-built-with-opus-4-6-claude-code-hackathon",
+    "https://claude.com/blog/memory",
+    "https://claude.com/blog/multi-agent-coordination-patterns",
+    "https://claude.com/blog/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork",
+    "https://claude.com/blog/new-in-claude-managed-agents",
+    "https://claude.com/blog/observability-for-developers-building-connectors",
+    "https://claude.com/blog/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development",
+    "https://claude.com/blog/optimize-code-performance-quickly",
+    "https://claude.com/blog/opus-4-6-finance",
+    "https://claude.com/blog/organization-skills-and-directory",
+    "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense",
+    "https://claude.com/blog/preview-review-and-merge-with-claude-code",
+    "https://claude.com/blog/product-development-in-the-agentic-era",
+    "https://claude.com/blog/product-management-on-the-ai-exponential",
+    "https://claude.com/blog/productivity-platforms",
+    "https://claude.com/blog/prompt-caching",
+    "https://claude.com/blog/research",
+    "https://claude.com/blog/running-an-ai-native-engineering-org",
+    "https://claude.com/blog/scaling-agentic-coding",
+    "https://claude.com/blog/seeing-like-an-agent",
+    "https://claude.com/blog/self-serve-enterprise",
+    "https://claude.com/blog/skills",
+    "https://claude.com/blog/skills-explained",
+    "https://claude.com/blog/structured-outputs-on-the-claude-developer-platform",
+    "https://claude.com/blog/subagents-in-claude-code",
+    "https://claude.com/blog/the-advisor-strategy",
+    "https://claude.com/blog/the-claude-cowork-product-guide",
+    "https://claude.com/blog/the-founders-playbook",
+    "https://claude.com/blog/token-saving-updates",
+    "https://claude.com/blog/upgraded-anthropic-console",
+    "https://claude.com/blog/using-claude-code-session-management-and-1m-context",
+    "https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html",
+    "https://claude.com/blog/using-claude-md-files",
+    "https://claude.com/blog/using-llms-to-secure-source-code",
+    "https://claude.com/blog/web-search",
+    "https://claude.com/blog/web-search-api",
+    "https://claude.com/blog/what-is-model-context-protocol",
+    "https://claude.com/blog/whats-new-in-claude-managed-agents",
+    "https://claude.com/blog/your-thinking-partner",
+    "https://claude.com/blog/zero-trust-for-ai-agents"
+  ],
+  "generated_reports": [
+    {
+      "url": "https://claude.com/blog/upgraded-anthropic-console",
+      "title": "Get to production faster with the upgraded Anthropic Console",
+      "date": "2025-03-05",
+      "markdown": "monthly_report/2025-03/daily_report/2025-03-05/2025-03-05_upgraded-anthropic-console.md",
+      "html": "monthly_report/2025-03/daily_report/2025-03-05/2025-03-05_upgraded-anthropic-console.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/token-saving-updates",
+      "title": "Token-saving updates on the Anthropic API",
+      "date": "2025-03-12",
+      "markdown": "monthly_report/2025-03/daily_report/2025-03-12/2025-03-12_token-saving-updates.md",
+      "html": "monthly_report/2025-03/daily_report/2025-03-12/2025-03-12_token-saving-updates.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/web-search",
+      "title": "Claude can now search the web",
+      "date": "2025-03-19",
+      "markdown": "monthly_report/2025-03/daily_report/2025-03-19/2025-03-19_web-search.md",
+      "html": "monthly_report/2025-03/daily_report/2025-03-19/2025-03-19_web-search.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-on-google-cloud-fedramp-high",
+      "title": "Claude on Google Cloud’s Vertex AI: FedRAMP High and IL2 Authorized",
+      "date": "2025-04-01",
+      "markdown": "monthly_report/2025-04/daily_report/2025-04-01/2025-04-01_claude-on-google-cloud-fedramp-high.md",
+      "html": "monthly_report/2025-04/daily_report/2025-04-01/2025-04-01_claude-on-google-cloud-fedramp-high.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/max-plan",
+      "title": "Introducing the Max Plan",
+      "date": "2025-04-08",
+      "markdown": "monthly_report/2025-04/daily_report/2025-04-08/2025-04-08_max-plan.md",
+      "html": "monthly_report/2025-04/daily_report/2025-04-08/2025-04-08_max-plan.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/research",
+      "title": "Claude takes research to new places",
+      "date": "2025-04-14",
+      "markdown": "monthly_report/2025-04/daily_report/2025-04-14/2025-04-14_research.md",
+      "html": "monthly_report/2025-04/daily_report/2025-04-14/2025-04-14_research.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/integrations",
+      "title": "Claude can now connect to your world",
+      "date": "2025-04-30",
+      "markdown": "monthly_report/2025-04/daily_report/2025-04-30/2025-04-30_integrations.md",
+      "html": "monthly_report/2025-04/daily_report/2025-04-30/2025-04-30_integrations.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/web-search-api",
+      "title": "Introducing web search on the Anthropic API",
+      "date": "2025-05-06",
+      "markdown": "monthly_report/2025-05/daily_report/2025-05-06/2025-05-06_web-search-api.md",
+      "html": "monthly_report/2025-05/daily_report/2025-05-06/2025-05-06_web-search-api.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/agent-capabilities-api",
+      "title": "New capabilities for building agents on the Anthropic API",
+      "date": "2025-05-21",
+      "markdown": "monthly_report/2025-05/daily_report/2025-05-21/2025-05-21_agent-capabilities-api.md",
+      "html": "monthly_report/2025-05/daily_report/2025-05-21/2025-05-21_agent-capabilities-api.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-code-remote-mcp",
+      "title": "Remote MCP support in Claude Code",
+      "date": "2025-06-17",
+      "markdown": "monthly_report/2025-06/daily_report/2025-06-17/2025-06-17_claude-code-remote-mcp.md",
+      "html": "monthly_report/2025-06/daily_report/2025-06-17/2025-06-17_claude-code-remote-mcp.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/introducing-citations-api",
+      "title": "Introducing Citations on the Anthropic API",
+      "date": "2025-06-22",
+      "markdown": "monthly_report/2025-06/daily_report/2025-06-22/2025-06-22_introducing-citations-api.md",
+      "html": "monthly_report/2025-06/daily_report/2025-06-22/2025-06-22_introducing-citations-api.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/build-artifacts",
+      "title": "Turn ideas into interactive AI-powered apps",
+      "date": "2025-06-24",
+      "markdown": "monthly_report/2025-06/daily_report/2025-06-24/2025-06-24_build-artifacts.md",
+      "html": "monthly_report/2025-06/daily_report/2025-06-24/2025-06-24_build-artifacts.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/connectors-directory",
+      "title": "Discover tools that work with Claude",
+      "date": "2025-07-13",
+      "markdown": "monthly_report/2025-07/daily_report/2025-07-13/2025-07-13_connectors-directory.md",
+      "html": "monthly_report/2025-07/daily_report/2025-07-13/2025-07-13_connectors-directory.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-anthropic-teams-use-claude-code",
+      "title": "How Anthropic teams use Claude Code",
+      "date": "2025-07-23",
+      "markdown": "monthly_report/2025-07/daily_report/2025-07-23/2025-07-23_how-anthropic-teams-use-claude-code.md",
+      "html": "monthly_report/2025-07/daily_report/2025-07-23/2025-07-23_how-anthropic-teams-use-claude-code.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-powered-artifacts",
+      "title": "Build and share AI-powered apps with Claude",
+      "date": "2025-07-24",
+      "markdown": "monthly_report/2025-07/daily_report/2025-07-24/2025-07-24_claude-powered-artifacts.md",
+      "html": "monthly_report/2025-07/daily_report/2025-07-24/2025-07-24_claude-powered-artifacts.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/automate-security-reviews-with-claude-code",
+      "title": "Automate security reviews with Claude Code",
+      "date": "2025-08-05",
+      "markdown": "monthly_report/2025-08/daily_report/2025-08-05/2025-08-05_automate-security-reviews-with-claude-code.md",
+      "html": "monthly_report/2025-08/daily_report/2025-08-05/2025-08-05_automate-security-reviews-with-claude-code.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/1m-context",
+      "title": "Claude Sonnet 4 now supports 1M tokens of context",
+      "date": "2025-08-11",
+      "markdown": "monthly_report/2025-08/daily_report/2025-08-11/2025-08-11_1m-context.md",
+      "html": "monthly_report/2025-08/daily_report/2025-08-11/2025-08-11_1m-context.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/prompt-caching",
+      "title": "Prompt caching with Claude",
+      "date": "2025-08-13",
+      "markdown": "monthly_report/2025-08/daily_report/2025-08-13/2025-08-13_prompt-caching.md",
+      "html": "monthly_report/2025-08/daily_report/2025-08-13/2025-08-13_prompt-caching.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-code-and-new-admin-controls-for-business-plans",
+      "title": "Claude Code and new admin controls for business plans",
+      "date": "2025-08-19",
+      "markdown": "monthly_report/2025-08/daily_report/2025-08-19/2025-08-19_claude-code-and-new-admin-controls-for-business-plans.md",
+      "html": "monthly_report/2025-08/daily_report/2025-08-19/2025-08-19_claude-code-and-new-admin-controls-for-business-plans.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-for-chrome",
+      "title": "Piloting Claude in Chrome",
+      "date": "2025-08-24",
+      "markdown": "monthly_report/2025-08/daily_report/2025-08-24/2025-08-24_claude-for-chrome.md",
+      "html": "monthly_report/2025-08/daily_report/2025-08-24/2025-08-24_claude-for-chrome.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/create-files",
+      "title": "Claude can now create and edit files",
+      "date": "2025-09-08",
+      "markdown": "monthly_report/2025-09/daily_report/2025-09-08/2025-09-08_create-files.md",
+      "html": "monthly_report/2025-09/daily_report/2025-09-08/2025-09-08_create-files.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/memory",
+      "title": "Bringing memory to Claude",
+      "date": "2025-09-10",
+      "markdown": "monthly_report/2025-09/daily_report/2025-09-10/2025-09-10_memory.md",
+      "html": "monthly_report/2025-09/daily_report/2025-09-10/2025-09-10_memory.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-now-available-in-microsoft-365-copilot",
+      "title": "Claude is now available in Microsoft 365 Copilot",
+      "date": "2025-09-23",
+      "markdown": "monthly_report/2025-09/daily_report/2025-09-23/2025-09-23_claude-now-available-in-microsoft-365-copilot.md",
+      "html": "monthly_report/2025-09/daily_report/2025-09-23/2025-09-23_claude-now-available-in-microsoft-365-copilot.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/building-agents-with-the-claude-agent-sdk",
+      "title": "Building agents with the Claude Agent SDK",
+      "date": "2025-09-28",
+      "markdown": "monthly_report/2025-09/daily_report/2025-09-28/2025-09-28_building-agents-with-the-claude-agent-sdk.md",
+      "html": "monthly_report/2025-09/daily_report/2025-09-28/2025-09-28_building-agents-with-the-claude-agent-sdk.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/context-management",
+      "title": "Managing context on the Claude Developer Platform",
+      "date": "2025-09-28",
+      "markdown": "monthly_report/2025-09/daily_report/2025-09-28/2025-09-28_context-management.md",
+      "html": "monthly_report/2025-09/daily_report/2025-09-28/2025-09-28_context-management.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-and-slack",
+      "title": "Claude and Slack",
+      "date": "2025-09-30",
+      "markdown": "monthly_report/2025-09/daily_report/2025-09-30/2025-09-30_claude-and-slack.md",
+      "html": "monthly_report/2025-09/daily_report/2025-09-30/2025-09-30_claude-and-slack.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/driving-ai-transformation-with-claude",
+      "title": "How enterprises are driving AI transformation with Claude",
+      "date": "2025-09-30",
+      "markdown": "monthly_report/2025-09/daily_report/2025-09-30/2025-09-30_driving-ai-transformation-with-claude.md",
+      "html": "monthly_report/2025-09/daily_report/2025-09-30/2025-09-30_driving-ai-transformation-with-claude.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/optimize-code-performance-quickly",
+      "title": "Optimize code performance quickly",
+      "date": "2025-10-05",
+      "markdown": "monthly_report/2025-10/daily_report/2025-10-05/2025-10-05_optimize-code-performance-quickly.md",
+      "html": "monthly_report/2025-10/daily_report/2025-10-05/2025-10-05_optimize-code-performance-quickly.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/beyond-permission-prompts-making-claude-code-more-secure-and-autonomous",
+      "title": "Beyond permission prompts: making Claude Code more secure and autonomous",
+      "date": "2025-10-07",
+      "markdown": "monthly_report/2025-10/daily_report/2025-10-07/2025-10-07_beyond-permission-prompts-making-claude-code-more-secure-and-autonomous.md",
+      "html": "monthly_report/2025-10/daily_report/2025-10-07/2025-10-07_beyond-permission-prompts-making-claude-code-more-secure-and-autonomous.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-code-plugins",
+      "title": "Customize Claude Code with plugins",
+      "date": "2025-10-08",
+      "markdown": "monthly_report/2025-10/daily_report/2025-10-08/2025-10-08_claude-code-plugins.md",
+      "html": "monthly_report/2025-10/daily_report/2025-10-08/2025-10-08_claude-code-plugins.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/build-responsive-web-layouts",
+      "title": "Build responsive web layouts",
+      "date": "2025-10-09",
+      "markdown": "monthly_report/2025-10/daily_report/2025-10-09/2025-10-09_build-responsive-web-layouts.md",
+      "html": "monthly_report/2025-10/daily_report/2025-10-09/2025-10-09_build-responsive-web-layouts.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/scaling-agentic-coding",
+      "title": "How to scale agentic coding across your engineering organization",
+      "date": "2025-10-14",
+      "markdown": "monthly_report/2025-10/daily_report/2025-10-14/2025-10-14_scaling-agentic-coding.md",
+      "html": "monthly_report/2025-10/daily_report/2025-10-14/2025-10-14_scaling-agentic-coding.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/productivity-platforms",
+      "title": "Claude and your productivity platforms",
+      "date": "2025-10-15",
+      "markdown": "monthly_report/2025-10/daily_report/2025-10-15/2025-10-15_productivity-platforms.md",
+      "html": "monthly_report/2025-10/daily_report/2025-10-15/2025-10-15_productivity-platforms.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/skills",
+      "title": "Introducing Agent Skills",
+      "date": "2025-10-15",
+      "markdown": "monthly_report/2025-10/daily_report/2025-10-15/2025-10-15_skills.md",
+      "html": "monthly_report/2025-10/daily_report/2025-10-15/2025-10-15_skills.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-code-on-the-web",
+      "title": "Claude Code on the web",
+      "date": "2025-10-19",
+      "markdown": "monthly_report/2025-10/daily_report/2025-10-19/2025-10-19_claude-code-on-the-web.md",
+      "html": "monthly_report/2025-10/daily_report/2025-10-19/2025-10-19_claude-code-on-the-web.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/integrate-apis-seamlessly",
+      "title": "How to integrate APIs seamlessly",
+      "date": "2025-10-26",
+      "markdown": "monthly_report/2025-10/daily_report/2025-10-26/2025-10-26_integrate-apis-seamlessly.md",
+      "html": "monthly_report/2025-10/daily_report/2025-10-26/2025-10-26_integrate-apis-seamlessly.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/fix-software-bugs-faster-with-claude",
+      "title": "Fix software bugs faster with Claude",
+      "date": "2025-10-27",
+      "markdown": "monthly_report/2025-10/daily_report/2025-10-27/2025-10-27_fix-software-bugs-faster-with-claude.md",
+      "html": "monthly_report/2025-10/daily_report/2025-10-27/2025-10-27_fix-software-bugs-faster-with-claude.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/building-ai-agents-in-financial-services",
+      "title": "Building AI agents for financial services",
+      "date": "2025-10-29",
+      "markdown": "monthly_report/2025-10/daily_report/2025-10-29/2025-10-29_building-ai-agents-in-financial-services.md",
+      "html": "monthly_report/2025-10/daily_report/2025-10-29/2025-10-29_building-ai-agents-in-financial-services.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/building-ai-agents-in-healthcare-and-life-sciences",
+      "title": "Building AI agents for healthcare and life sciences",
+      "date": "2025-10-29",
+      "markdown": "monthly_report/2025-10/daily_report/2025-10-29/2025-10-29_building-ai-agents-in-healthcare-and-life-sciences.md",
+      "html": "monthly_report/2025-10/daily_report/2025-10-29/2025-10-29_building-ai-agents-in-healthcare-and-life-sciences.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-brex-improves-code-quality-and-productivity-with-claude-code",
+      "title": "How Brex improves code quality and productivity with Claude Code",
+      "date": "2025-10-29",
+      "markdown": "monthly_report/2025-10/daily_report/2025-10-29/2025-10-29_how-brex-improves-code-quality-and-productivity-with-claude-code.md",
+      "html": "monthly_report/2025-10/daily_report/2025-10-29/2025-10-29_how-brex-improves-code-quality-and-productivity-with-claude-code.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/introduction-to-agentic-coding",
+      "title": "Introduction to agentic coding",
+      "date": "2025-10-29",
+      "markdown": "monthly_report/2025-10/daily_report/2025-10-29/2025-10-29_introduction-to-agentic-coding.md",
+      "html": "monthly_report/2025-10/daily_report/2025-10-29/2025-10-29_introduction-to-agentic-coding.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/what-is-model-context-protocol",
+      "title": "What is Model Context Protocol? Connect AI to your world",
+      "date": "2025-10-30",
+      "markdown": "monthly_report/2025-10/daily_report/2025-10-30/2025-10-30_what-is-model-context-protocol.md",
+      "html": "monthly_report/2025-10/daily_report/2025-10-30/2025-10-30_what-is-model-context-protocol.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/building-ai-agents-for-startups",
+      "title": "Building AI agents for startups",
+      "date": "2025-11-02",
+      "markdown": "monthly_report/2025-11/daily_report/2025-11-02/2025-11-02_building-ai-agents-for-startups.md",
+      "html": "monthly_report/2025-11/daily_report/2025-11-02/2025-11-02_building-ai-agents-for-startups.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/best-practices-for-prompt-engineering",
+      "title": "Best practices for prompt engineering",
+      "date": "2025-11-09",
+      "markdown": "monthly_report/2025-11/daily_report/2025-11-09/2025-11-09_best-practices-for-prompt-engineering.md",
+      "html": "monthly_report/2025-11/daily_report/2025-11-09/2025-11-09_best-practices-for-prompt-engineering.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/improving-frontend-design-through-skills",
+      "title": "Improving frontend design through Skills",
+      "date": "2025-11-11",
+      "markdown": "monthly_report/2025-11/daily_report/2025-11-11/2025-11-11_improving-frontend-design-through-skills.md",
+      "html": "monthly_report/2025-11/daily_report/2025-11-11/2025-11-11_improving-frontend-design-through-skills.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/skills-explained",
+      "title": "Skills explained: How Skills compares to prompts, Projects, MCP, and subagents ",
+      "date": "2025-11-12",
+      "markdown": "monthly_report/2025-11/daily_report/2025-11-12/2025-11-12_skills-explained.md",
+      "html": "monthly_report/2025-11/daily_report/2025-11-12/2025-11-12_skills-explained.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/structured-outputs-on-the-claude-developer-platform",
+      "title": "Structured outputs on the Claude Developer Platform",
+      "date": "2025-11-13",
+      "markdown": "monthly_report/2025-11/daily_report/2025-11-13/2025-11-13_structured-outputs-on-the-claude-developer-platform.md",
+      "html": "monthly_report/2025-11/daily_report/2025-11-13/2025-11-13_structured-outputs-on-the-claude-developer-platform.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/building-companies-with-claude-code",
+      "title": "How three YC startups built their companies with Claude Code",
+      "date": "2025-11-16",
+      "markdown": "monthly_report/2025-11/daily_report/2025-11-16/2025-11-16_building-companies-with-claude-code.md",
+      "html": "monthly_report/2025-11/daily_report/2025-11-16/2025-11-16_building-companies-with-claude-code.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-to-create-skills-key-steps-limitations-and-examples",
+      "title": "How to create Skills: Key steps, limitations, and examples",
+      "date": "2025-11-18",
+      "markdown": "monthly_report/2025-11/daily_report/2025-11-18/2025-11-18_how-to-create-skills-key-steps-limitations-and-examples.md",
+      "html": "monthly_report/2025-11/daily_report/2025-11-18/2025-11-18_how-to-create-skills-key-steps-limitations-and-examples.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/your-thinking-partner",
+      "title": "What’s new in Claude: Turning Claude into your thinking partner",
+      "date": "2025-11-19",
+      "markdown": "monthly_report/2025-11/daily_report/2025-11-19/2025-11-19_your-thinking-partner.md",
+      "html": "monthly_report/2025-11/daily_report/2025-11-19/2025-11-19_your-thinking-partner.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/using-claude-md-files",
+      "title": "Using CLAUDE.md files: Customizing Claude Code for your codebase",
+      "date": "2025-11-24",
+      "markdown": "monthly_report/2025-11/daily_report/2025-11-24/2025-11-24_using-claude-md-files.md",
+      "html": "monthly_report/2025-11/daily_report/2025-11-24/2025-11-24_using-claude-md-files.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/key-benefits-transitioning-agentic-coding",
+      "title": "What are the key benefits of transitioning to agentic coding for software development?",
+      "date": "2025-11-30",
+      "markdown": "monthly_report/2025-11/daily_report/2025-11-30/2025-11-30_key-benefits-transitioning-agentic-coding.md",
+      "html": "monthly_report/2025-11/daily_report/2025-11-30/2025-11-30_key-benefits-transitioning-agentic-coding.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-code-and-slack",
+      "title": "Claude Code and Slack",
+      "date": "2025-12-07",
+      "markdown": "monthly_report/2025-12/daily_report/2025-12-07/2025-12-07_claude-code-and-slack.md",
+      "html": "monthly_report/2025-12/daily_report/2025-12-07/2025-12-07_claude-code-and-slack.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-anthropic-uses-claude-legal",
+      "title": "How Anthropic&#39;s legal team cut review times from days to hours with Claude",
+      "date": "2025-12-07",
+      "markdown": "monthly_report/2025-12/daily_report/2025-12-07/2025-12-07_how-anthropic-uses-claude-legal.md",
+      "html": "monthly_report/2025-12/daily_report/2025-12-07/2025-12-07_how-anthropic-uses-claude-legal.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-enterprises-are-building-ai-agents-in-2026",
+      "title": "How enterprises are building AI agents in 2026",
+      "date": "2025-12-08",
+      "markdown": "monthly_report/2025-12/daily_report/2025-12-08/2025-12-08_how-enterprises-are-building-ai-agents-in-2026.md",
+      "html": "monthly_report/2025-12/daily_report/2025-12-08/2025-12-08_how-enterprises-are-building-ai-agents-in-2026.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-to-configure-hooks",
+      "title": "Claude Code power user customization: How to configure hooks",
+      "date": "2025-12-10",
+      "markdown": "monthly_report/2025-12/daily_report/2025-12-10/2025-12-10_how-to-configure-hooks.md",
+      "html": "monthly_report/2025-12/daily_report/2025-12-10/2025-12-10_how-to-configure-hooks.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/making-claude-a-better-electrical-engineer",
+      "title": "Making Claude a better electrical engineer",
+      "date": "2025-12-11",
+      "markdown": "monthly_report/2025-12/daily_report/2025-12-11/2025-12-11_making-claude-a-better-electrical-engineer.md",
+      "html": "monthly_report/2025-12/daily_report/2025-12-11/2025-12-11_making-claude-a-better-electrical-engineer.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/organization-skills-and-directory",
+      "title": "Skills for organizations, partners, the ecosystem",
+      "date": "2025-12-17",
+      "markdown": "monthly_report/2025-12/daily_report/2025-12-17/2025-12-17_organization-skills-and-directory.md",
+      "html": "monthly_report/2025-12/daily_report/2025-12-17/2025-12-17_organization-skills-and-directory.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/extending-claude-capabilities-with-skills-mcp-servers",
+      "title": "Extending Claude’s capabilities with skills and MCP servers",
+      "date": "2025-12-18",
+      "markdown": "monthly_report/2025-12/daily_report/2025-12-18/2025-12-18_extending-claude-capabilities-with-skills-mcp-servers.md",
+      "html": "monthly_report/2025-12/daily_report/2025-12-18/2025-12-18_extending-claude-capabilities-with-skills-mcp-servers.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/eight-trends-defining-how-software-gets-built-in-2026",
+      "title": "Eight trends defining how software gets built in 2026",
+      "date": "2026-01-20",
+      "markdown": "monthly_report/2026-01/daily_report/2026-01-20/2026-01-20_eight-trends-defining-how-software-gets-built-in-2026.md",
+      "html": "monthly_report/2026-01/daily_report/2026-01-20/2026-01-20_eight-trends-defining-how-software-gets-built-in-2026.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/building-agents-with-skills-equipping-agents-for-specialized-work",
+      "title": "Building agents with Skills: Equipping agents for specialized work",
+      "date": "2026-01-21",
+      "markdown": "monthly_report/2026-01/daily_report/2026-01-21/2026-01-21_building-agents-with-skills-equipping-agents-for-specialized-work.md",
+      "html": "monthly_report/2026-01/daily_report/2026-01-21/2026-01-21_building-agents-with-skills-equipping-agents-for-specialized-work.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/building-multi-agent-systems-when-and-how-to-use-them",
+      "title": "Building multi-agent systems: When and how to use them",
+      "date": "2026-01-22",
+      "markdown": "monthly_report/2026-01/daily_report/2026-01-22/2026-01-22_building-multi-agent-systems-when-and-how-to-use-them.md",
+      "html": "monthly_report/2026-01/daily_report/2026-01-22/2026-01-22_building-multi-agent-systems-when-and-how-to-use-them.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-anthropic-uses-claude-marketing",
+      "title": "How Anthropic&#39;s Growth Marketing team cut ad creation time from 30 minutes to 30 seconds with Claude Code",
+      "date": "2026-01-25",
+      "markdown": "monthly_report/2026-01/daily_report/2026-01-25/2026-01-25_how-anthropic-uses-claude-marketing.md",
+      "html": "monthly_report/2026-01/daily_report/2026-01-25/2026-01-25_how-anthropic-uses-claude-marketing.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/interactive-tools-in-claude",
+      "title": "Your favorite work tools are now interactive connectors inside Claude",
+      "date": "2026-01-25",
+      "markdown": "monthly_report/2026-01/daily_report/2026-01-25/2026-01-25_interactive-tools-in-claude.md",
+      "html": "monthly_report/2026-01/daily_report/2026-01-25/2026-01-25_interactive-tools-in-claude.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-team-updates",
+      "title": "Updates to Claude Team",
+      "date": "2026-01-27",
+      "markdown": "monthly_report/2026-01/daily_report/2026-01-27/2026-01-27_claude-team-updates.md",
+      "html": "monthly_report/2026-01/daily_report/2026-01-27/2026-01-27_claude-team-updates.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-leading-retailers-are-turning-ai-pilots-into-enterprise-wide-transformation",
+      "title": "How leading retailers are turning AI pilots into enterprise-wide transformation",
+      "date": "2026-01-27",
+      "markdown": "monthly_report/2026-01/daily_report/2026-01-27/2026-01-27_how-leading-retailers-are-turning-ai-pilots-into-enterprise-wide-transformation.md",
+      "html": "monthly_report/2026-01/daily_report/2026-01-27/2026-01-27_how-leading-retailers-are-turning-ai-pilots-into-enterprise-wide-transformation.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/complete-guide-to-building-skills-for-claude",
+      "title": "A complete guide to building skills for Claude",
+      "date": "2026-01-28",
+      "markdown": "monthly_report/2026-01/daily_report/2026-01-28/2026-01-28_complete-guide-to-building-skills-for-claude.md",
+      "html": "monthly_report/2026-01/daily_report/2026-01-28/2026-01-28_complete-guide-to-building-skills-for-claude.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/contribution-metrics",
+      "title": "Understand Claude Code’s impact with contribution metrics",
+      "date": "2026-01-28",
+      "markdown": "monthly_report/2026-01/daily_report/2026-01-28/2026-01-28_contribution-metrics.md",
+      "html": "monthly_report/2026-01/daily_report/2026-01-28/2026-01-28_contribution-metrics.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/cowork-plugins",
+      "title": "Customize Cowork with plugins",
+      "date": "2026-01-29",
+      "markdown": "monthly_report/2026-01/daily_report/2026-01-29/2026-01-29_cowork-plugins.md",
+      "html": "monthly_report/2026-01/daily_report/2026-01-29/2026-01-29_cowork-plugins.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/opus-4-6-finance",
+      "title": "Advancing finance with Claude Opus 4.6",
+      "date": "2026-02-04",
+      "markdown": "monthly_report/2026-02/daily_report/2026-02-04/2026-02-04_opus-4-6-finance.md",
+      "html": "monthly_report/2026-02/daily_report/2026-02-04/2026-02-04_opus-4-6-finance.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/behind-model-launch-what-customers-discovered-testing-claude-opus-4-6-early",
+      "title": "Behind the model launch: What customers discovered testing Claude Opus 4.6 early",
+      "date": "2026-02-08",
+      "markdown": "monthly_report/2026-02/daily_report/2026-02-08/2026-02-08_behind-model-launch-what-customers-discovered-testing-claude-opus-4-6-early.md",
+      "html": "monthly_report/2026-02/daily_report/2026-02-08/2026-02-08_behind-model-launch-what-customers-discovered-testing-claude-opus-4-6-early.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/self-serve-enterprise",
+      "title": "Claude Enterprise, now available self-serve",
+      "date": "2026-02-11",
+      "markdown": "monthly_report/2026-02/daily_report/2026-02-11/2026-02-11_self-serve-enterprise.md",
+      "html": "monthly_report/2026-02/daily_report/2026-02-11/2026-02-11_self-serve-enterprise.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/improved-web-search-with-dynamic-filtering",
+      "title": "Increase web search accuracy and efficiency with dynamic filtering",
+      "date": "2026-02-16",
+      "markdown": "monthly_report/2026-02/daily_report/2026-02-16/2026-02-16_improved-web-search-with-dynamic-filtering.md",
+      "html": "monthly_report/2026-02/daily_report/2026-02-16/2026-02-16_improved-web-search-with-dynamic-filtering.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/preview-review-and-merge-with-claude-code",
+      "title": "Bringing automated preview, review, and merge to Claude Code on desktop",
+      "date": "2026-02-19",
+      "markdown": "monthly_report/2026-02/daily_report/2026-02-19/2026-02-19_preview-review-and-merge-with-claude-code.md",
+      "html": "monthly_report/2026-02/daily_report/2026-02-19/2026-02-19_preview-review-and-merge-with-claude-code.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-ai-helps-break-cost-barrier-cobol-modernization",
+      "title": "How AI helps break the cost barrier to COBOL modernization",
+      "date": "2026-02-22",
+      "markdown": "monthly_report/2026-02/daily_report/2026-02-22/2026-02-22_how-ai-helps-break-cost-barrier-cobol-modernization.md",
+      "html": "monthly_report/2026-02/daily_report/2026-02-22/2026-02-22_how-ai-helps-break-cost-barrier-cobol-modernization.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/cowork-plugins-across-enterprise",
+      "title": "Cowork and plugins for teams across the enterprise",
+      "date": "2026-02-23",
+      "markdown": "monthly_report/2026-02/daily_report/2026-02-23/2026-02-23_cowork-plugins-across-enterprise.md",
+      "html": "monthly_report/2026-02/daily_report/2026-02-23/2026-02-23_cowork-plugins-across-enterprise.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/cowork-plugins-finance",
+      "title": "Cowork and plugins for finance ",
+      "date": "2026-02-23",
+      "markdown": "monthly_report/2026-02/daily_report/2026-02-23/2026-02-23_cowork-plugins-finance.md",
+      "html": "monthly_report/2026-02/daily_report/2026-02-23/2026-02-23_cowork-plugins-finance.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/improving-skill-creator-test-measure-and-refine-agent-skills",
+      "title": "Improving skill-creator: Test, measure, and refine Agent Skills",
+      "date": "2026-03-02",
+      "markdown": "monthly_report/2026-03/daily_report/2026-03-02/2026-03-02_improving-skill-creator-test-measure-and-refine-agent-skills.md",
+      "html": "monthly_report/2026-03/daily_report/2026-03-02/2026-03-02_improving-skill-creator-test-measure-and-refine-agent-skills.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/common-workflow-patterns-for-ai-agents-and-when-to-use-them",
+      "title": "Common workflow patterns for AI agents—and when to use them",
+      "date": "2026-03-04",
+      "markdown": "monthly_report/2026-03/daily_report/2026-03-04/2026-03-04_common-workflow-patterns-for-ai-agents-and-when-to-use-them.md",
+      "html": "monthly_report/2026-03/daily_report/2026-03-04/2026-03-04_common-workflow-patterns-for-ai-agents-and-when-to-use-them.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/code-review",
+      "title": "Bringing Code Review to Claude Code",
+      "date": "2026-03-08",
+      "markdown": "monthly_report/2026-03/daily_report/2026-03-08/2026-03-08_code-review.md",
+      "html": "monthly_report/2026-03/daily_report/2026-03-08/2026-03-08_code-review.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-excel-powerpoint-updates",
+      "title": "Advancing Claude for Excel and PowerPoint",
+      "date": "2026-03-10",
+      "markdown": "monthly_report/2026-03/daily_report/2026-03-10/2026-03-10_claude-excel-powerpoint-updates.md",
+      "html": "monthly_report/2026-03/daily_report/2026-03-10/2026-03-10_claude-excel-powerpoint-updates.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-builds-visuals",
+      "title": "Claude now creates interactive charts, diagrams and visualizations",
+      "date": "2026-03-11",
+      "markdown": "monthly_report/2026-03/daily_report/2026-03-11/2026-03-11_claude-builds-visuals.md",
+      "html": "monthly_report/2026-03/daily_report/2026-03-11/2026-03-11_claude-builds-visuals.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/1m-context-ga",
+      "title": "1M context is now generally available for Opus 4.6 and Sonnet 4.6",
+      "date": "2026-03-12",
+      "markdown": "monthly_report/2026-03/daily_report/2026-03-12/2026-03-12_1m-context-ga.md",
+      "html": "monthly_report/2026-03/daily_report/2026-03-12/2026-03-12_1m-context-ga.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/code-with-claude-san-francisco-london-tokyo",
+      "title": "Code with Claude comes to San Francisco, London, and Tokyo",
+      "date": "2026-03-17",
+      "markdown": "monthly_report/2026-03/daily_report/2026-03-17/2026-03-17_code-with-claude-san-francisco-london-tokyo.md",
+      "html": "monthly_report/2026-03/daily_report/2026-03-17/2026-03-17_code-with-claude-san-francisco-london-tokyo.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/product-management-on-the-ai-exponential",
+      "title": "Product management on the AI exponential ",
+      "date": "2026-03-18",
+      "markdown": "monthly_report/2026-03/daily_report/2026-03-18/2026-03-18_product-management-on-the-ai-exponential.md",
+      "html": "monthly_report/2026-03/daily_report/2026-03-18/2026-03-18_product-management-on-the-ai-exponential.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/dispatch-and-computer-use",
+      "title": "Put Claude to work on your computer",
+      "date": "2026-03-22",
+      "markdown": "monthly_report/2026-03/daily_report/2026-03-22/2026-03-22_dispatch-and-computer-use.md",
+      "html": "monthly_report/2026-03/daily_report/2026-03-22/2026-03-22_dispatch-and-computer-use.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/auto-mode",
+      "title": "Auto mode for Claude Code",
+      "date": "2026-03-23",
+      "markdown": "monthly_report/2026-03/daily_report/2026-03-23/2026-03-23_auto-mode.md",
+      "html": "monthly_report/2026-03/daily_report/2026-03-23/2026-03-23_auto-mode.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-platform-compliance-api",
+      "title": "Audit Claude Platform activity with the Compliance API",
+      "date": "2026-03-29",
+      "markdown": "monthly_report/2026-03/daily_report/2026-03-29/2026-03-29_claude-platform-compliance-api.md",
+      "html": "monthly_report/2026-03/daily_report/2026-03-29/2026-03-29_claude-platform-compliance-api.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/harnessing-claudes-intelligence",
+      "title": "Harnessing Claude’s intelligence",
+      "date": "2026-04-01",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-01/2026-04-01_harnessing-claudes-intelligence.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-01/2026-04-01_harnessing-claudes-intelligence.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/subagents-in-claude-code",
+      "title": "How and when to use subagents in Claude Code",
+      "date": "2026-04-06",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-06/2026-04-06_subagents-in-claude-code.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-06/2026-04-06_subagents-in-claude-code.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/carta-healthcare-clinical-abstractor",
+      "title": "How Carta Healthcare gets AI to reason like a clinical abstractor",
+      "date": "2026-04-07",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-07/2026-04-07_carta-healthcare-clinical-abstractor.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-07/2026-04-07_carta-healthcare-clinical-abstractor.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-managed-agents",
+      "title": "Claude Managed Agents: get to production 10x faster",
+      "date": "2026-04-07",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-07/2026-04-07_claude-managed-agents.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-07/2026-04-07_claude-managed-agents.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/cowork-for-enterprise",
+      "title": "Making Claude Cowork ready for enterprise",
+      "date": "2026-04-08",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-08/2026-04-08_cowork-for-enterprise.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-08/2026-04-08_cowork-for-enterprise.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/the-advisor-strategy",
+      "title": "The advisor strategy: Give agents an intelligence boost",
+      "date": "2026-04-08",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-08/2026-04-08_the-advisor-strategy.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-08/2026-04-08_the-advisor-strategy.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/multi-agent-coordination-patterns",
+      "title": "Multi-agent coordination patterns: Five approaches and when to use them",
+      "date": "2026-04-09",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-09/2026-04-09_multi-agent-coordination-patterns.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-09/2026-04-09_multi-agent-coordination-patterns.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense",
+      "title": "Preparing your security program for AI-accelerated offense",
+      "date": "2026-04-09",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-09/2026-04-09_preparing-your-security-program-for-ai-accelerated-offense.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-09/2026-04-09_preparing-your-security-program-for-ai-accelerated-offense.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/seeing-like-an-agent",
+      "title": "Seeing like an agent: how we design tools in Claude Code",
+      "date": "2026-04-09",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-09/2026-04-09_seeing-like-an-agent.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-09/2026-04-09_seeing-like-an-agent.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-code-desktop-redesign",
+      "title": "Redesigning Claude Code on desktop for parallel agents",
+      "date": "2026-04-13",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-13/2026-04-13_claude-code-desktop-redesign.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-13/2026-04-13_claude-code-desktop-redesign.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/introducing-routines-in-claude-code",
+      "title": "Introducing routines in Claude Code",
+      "date": "2026-04-13",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-13/2026-04-13_introducing-routines-in-claude-code.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-13/2026-04-13_introducing-routines-in-claude-code.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/using-claude-code-session-management-and-1m-context",
+      "title": "Using Claude Code: session management and 1M context",
+      "date": "2026-04-14",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-14/2026-04-14_using-claude-code-session-management-and-1m-context.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-14/2026-04-14_using-claude-code-session-management-and-1m-context.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/best-practices-for-using-claude-opus-4-7-with-claude-code",
+      "title": "Best practices for using Claude Opus 4.7 with Claude Code",
+      "date": "2026-04-15",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-15/2026-04-15_best-practices-for-using-claude-opus-4-7-with-claude-code.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-15/2026-04-15_best-practices-for-using-claude-opus-4-7-with-claude-code.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/meet-the-winners-of-our-built-with-opus-4-6-claude-code-hackathon",
+      "title": "Meet the winners of our Built with Opus 4.6 Claude Code hackathon ",
+      "date": "2026-04-19",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-19/2026-04-19_meet-the-winners-of-our-built-with-opus-4-6-claude-code-hackathon.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-19/2026-04-19_meet-the-winners-of-our-built-with-opus-4-6-claude-code-hackathon.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/building-agents-that-reach-production-systems-with-mcp",
+      "title": "Building agents that reach production systems with MCP",
+      "date": "2026-04-21",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-21/2026-04-21_building-agents-that-reach-production-systems-with-mcp.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-21/2026-04-21_building-agents-that-reach-production-systems-with-mcp.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-managed-agents-memory",
+      "title": "Built-in memory for Claude Managed Agents",
+      "date": "2026-04-22",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-22/2026-04-22_claude-managed-agents-memory.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-22/2026-04-22_claude-managed-agents-memory.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/connectors-for-everyday-life",
+      "title": "New connectors in Claude for everyday life",
+      "date": "2026-04-22",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-22/2026-04-22_connectors-for-everyday-life.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-22/2026-04-22_connectors-for-everyday-life.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development",
+      "title": "Onboarding Claude Code like a new developer: Lessons from 17 years of development",
+      "date": "2026-04-27",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-27/2026-04-27_onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-27/2026-04-27_onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-api-skill",
+      "title": "Claude API skill now in CodeRabbit, JetBrains, Resolve AI, and Warp",
+      "date": "2026-04-28",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-28/2026-04-28_claude-api-skill.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-28/2026-04-28_claude-api-skill.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork",
+      "title": "Deploying agentic AI across the enterprise with Claude Cowork",
+      "date": "2026-04-28",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-28/2026-04-28_new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-28/2026-04-28_new-guide-deploying-claude-across-the-enterprise-with-claude-cowork.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/product-development-in-the-agentic-era",
+      "title": "Product development in the agentic era",
+      "date": "2026-04-28",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-28/2026-04-28_product-development-in-the-agentic-era.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-28/2026-04-28_product-development-in-the-agentic-era.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/building-ai-agents-for-the-enterprise",
+      "title": "Building AI agents for the enterprise",
+      "date": "2026-04-29",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-29/2026-04-29_building-ai-agents-for-the-enterprise.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-29/2026-04-29_building-ai-agents-for-the-enterprise.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-security-public-beta",
+      "title": "Claude Security is now in public beta",
+      "date": "2026-04-29",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-29/2026-04-29_claude-security-public-beta.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-29/2026-04-29_claude-security-public-beta.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-kepler-built-verifiable-ai-for-financial-services-with-claude",
+      "title": "How Kepler built verifiable AI for financial services with Claude",
+      "date": "2026-04-29",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-29/2026-04-29_how-kepler-built-verifiable-ai-for-financial-services-with-claude.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-29/2026-04-29_how-kepler-built-verifiable-ai-for-financial-services-with-claude.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/lessons-from-building-claude-code-prompt-caching-is-everything",
+      "title": "Lessons from building Claude Code: Prompt caching is everything",
+      "date": "2026-04-29",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-29/2026-04-29_lessons-from-building-claude-code-prompt-caching-is-everything.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-29/2026-04-29_lessons-from-building-claude-code-prompt-caching-is-everything.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks",
+      "title": "How a non-technical project manager built and shipped a stress management app with Claude Code in six weeks",
+      "date": "2026-04-30",
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-30/2026-04-30_how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-30/2026-04-30_how-a-non-technical-project-manager-built-and-shipped-a-stress-management-app-with-claude-code-in-six-weeks.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/deploying-claude-across-financial-services",
+      "title": "Deploying Claude across financial services",
+      "date": "2026-05-04",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-04/2026-05-04_deploying-claude-across-financial-services.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-04/2026-05-04_deploying-claude-across-financial-services.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/new-in-claude-managed-agents",
+      "title": "New in Claude Managed Agents: dreaming, outcomes, and multiagent orchestration",
+      "date": "2026-05-05",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-05/2026-05-05_new-in-claude-managed-agents.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-05/2026-05-05_new-in-claude-managed-agents.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/collaborate-with-claude-across-excel-powerpoint-word-and-outlook",
+      "title": "Collaborate with Claude across Excel, PowerPoint, Word and Outlook ",
+      "date": "2026-05-06",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-06/2026-05-06_collaborate-with-claude-across-excel-powerpoint-word-and-outlook.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-06/2026-05-06_collaborate-with-claude-across-excel-powerpoint-word-and-outlook.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/agent-view-in-claude-code",
+      "title": "Agent view in Claude Code",
+      "date": "2026-05-10",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-10/2026-05-10_agent-view-in-claude-code.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-10/2026-05-10_agent-view-in-claude-code.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-platform-on-aws",
+      "title": "Introducing the Claude Platform on AWS",
+      "date": "2026-05-10",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-10/2026-05-10_claude-platform-on-aws.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-10/2026-05-10_claude-platform-on-aws.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-for-the-legal-industry",
+      "title": "Claude for the legal industry",
+      "date": "2026-05-11",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-11/2026-05-11_claude-for-the-legal-industry.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-11/2026-05-11_claude-for-the-legal-industry.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/code-w-claude-sf-2026-sf",
+      "title": "Code w/ Claude SF 2026 recap: Building on the AI exponential ",
+      "date": "2026-05-11",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-11/2026-05-11_code-w-claude-sf-2026-sf.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-11/2026-05-11_code-w-claude-sf-2026-sf.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-anthropic-uses-claude-cybersecurity",
+      "title": "How Anthropic&#39;s cybersecurity team built a threat detection platform with Claude Code",
+      "date": "2026-05-11",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-11/2026-05-11_how-anthropic-uses-claude-cybersecurity.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-11/2026-05-11_how-anthropic-uses-claude-cybersecurity.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/best-practices-for-computer-and-browser-use-with-claude",
+      "title": "Best practices for computer and browser use with Claude",
+      "date": "2026-05-12",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-12/2026-05-12_best-practices-for-computer-and-browser-use-with-claude.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-12/2026-05-12_best-practices-for-computer-and-browser-use-with-claude.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start",
+      "title": "How Claude Code works in large codebases: Best practices and where to start",
+      "date": "2026-05-13",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-13/2026-05-13_how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-13/2026-05-13_how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/the-founders-playbook",
+      "title": "The founder&#39;s playbook: Building an AI-native startup",
+      "date": "2026-05-13",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-13/2026-05-13_the-founders-playbook.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-13/2026-05-13_the-founders-playbook.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/deploying-claude-across-the-legal-industry",
+      "title": "Deploying Claude across the legal industry",
+      "date": "2026-05-14",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-14/2026-05-14_deploying-claude-across-the-legal-industry.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-14/2026-05-14_deploying-claude-across-the-legal-industry.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-managed-agents-updates",
+      "title": "New in Claude Managed Agents: self-hosted sandboxes and MCP tunnels",
+      "date": "2026-05-18",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-18/2026-05-18_claude-managed-agents-updates.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-18/2026-05-18_claude-managed-agents-updates.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-an-anthropic-sales-leader-uses-claude-cowork-to-run-a-4-000-account-book",
+      "title": "How an Anthropic sales leader uses Claude Cowork to run a 4,000-account book",
+      "date": "2026-05-19",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-19/2026-05-19_how-an-anthropic-sales-leader-uses-claude-cowork-to-run-a-4-000-account-book.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-19/2026-05-19_how-an-anthropic-sales-leader-uses-claude-cowork-to-run-a-4-000-account-book.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html",
+      "title": "Using Claude Code: The unreasonable effectiveness of HTML",
+      "date": "2026-05-19",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-19/2026-05-19_using-claude-code-the-unreasonable-effectiveness-of-html.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-19/2026-05-19_using-claude-code-the-unreasonable-effectiveness-of-html.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/compliance-api-security-partners",
+      "title": "Claude now works with more security and compliance tools",
+      "date": "2026-05-20",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-20/2026-05-20_compliance-api-security-partners.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-20/2026-05-20_compliance-api-security-partners.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-our-partners-are-putting-opus-to-work-for-cybersecurity",
+      "title": "How our partners are putting Opus to work for cybersecurity",
+      "date": "2026-05-20",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-20/2026-05-20_how-our-partners-are-putting-opus-to-work-for-cybersecurity.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-20/2026-05-20_how-our-partners-are-putting-opus-to-work-for-cybersecurity.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers",
+      "title": "How Anthropic&#39;s finance team uses Claude to shape the narrative behind the numbers",
+      "date": "2026-05-21",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-21/2026-05-21_how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-21/2026-05-21_how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/code-w-claude-london-2026-rethinking-how-we-build",
+      "title": "Code w/ Claude London 2026: Rethinking how we build",
+      "date": "2026-05-25",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-25/2026-05-25_code-w-claude-london-2026-rethinking-how-we-build.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-25/2026-05-25_code-w-claude-london-2026-rethinking-how-we-build.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-coderabbit-used-claude-to-build-an-agent-orchestration-system",
+      "title": "How CodeRabbit used Claude to build an agent orchestration system",
+      "date": "2026-05-26",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-26/2026-05-26_how-coderabbit-used-claude-to-build-an-agent-orchestration-system.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-26/2026-05-26_how-coderabbit-used-claude-to-build-an-agent-orchestration-system.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/using-llms-to-secure-source-code",
+      "title": "Using LLMs to secure source code",
+      "date": "2026-05-26",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-26/2026-05-26_using-llms-to-secure-source-code.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-26/2026-05-26_using-llms-to-secure-source-code.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/zero-trust-for-ai-agents",
+      "title": "Zero Trust for AI agents",
+      "date": "2026-05-26",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-26/2026-05-26_zero-trust-for-ai-agents.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-26/2026-05-26_zero-trust-for-ai-agents.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+      "title": "Introducing dynamic workflows in Claude Code",
+      "date": "2026-05-27",
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-27/2026-05-27_introducing-dynamic-workflows-in-claude-code.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-27/2026-05-27_introducing-dynamic-workflows-in-claude-code.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code",
+      "title": "A harness for every task: dynamic workflows in Claude Code ",
+      "date": "2026-06-01",
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-01/2026-06-01_a-harness-for-every-task-dynamic-workflows-in-claude-code.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-01/2026-06-01_a-harness-for-every-task-dynamic-workflows-in-claude-code.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork",
+      "title": "Best practices for getting started with Claude Cowork",
+      "date": "2026-06-02",
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_best-practices-for-getting-started-with-claude-cowork.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_best-practices-for-getting-started-with-claude-cowork.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude",
+      "title": "How Anthropic enables self-service data analytics with Claude",
+      "date": "2026-06-02",
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_how-anthropic-enables-self-service-data-analytics-with-claude.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_how-anthropic-enables-self-service-data-analytics-with-claude.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills",
+      "title": "Lessons from building Claude Code: How we use skills",
+      "date": "2026-06-02",
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_lessons-from-building-claude-code-how-we-use-skills.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_lessons-from-building-claude-code-how-we-use-skills.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/running-an-ai-native-engineering-org",
+      "title": "Running an AI-native engineering org",
+      "date": "2026-06-02",
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_running-an-ai-native-engineering-org.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_running-an-ai-native-engineering-org.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering",
+      "title": "How one Anthropic seller rebuilt his team&#39;s workflows with Claude Code",
+      "date": "2026-06-04",
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-04/2026-06-04_how-anthropic-uses-claude-gtm-engineering.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-04/2026-06-04_how-anthropic-uses-claude-gtm-engineering.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/the-claude-cowork-product-guide",
+      "title": "The Claude Cowork product guide",
+      "date": "2026-06-04",
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-04/2026-06-04_the-claude-cowork-product-guide.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-04/2026-06-04_the-claude-cowork-product-guide.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/claude-for-foundation-models",
+      "title": "Building intelligent apps for Apple platforms with Claude in the Foundation Models framework",
+      "date": "2026-06-07",
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-07/2026-06-07_claude-for-foundation-models.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-07/2026-06-07_claude-for-foundation-models.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/observability-for-developers-building-connectors",
+      "title": "Observability for developers building connectors",
+      "date": "2026-06-07",
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-07/2026-06-07_observability-for-developers-building-connectors.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-07/2026-06-07_observability-for-developers-building-connectors.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/whats-new-in-claude-managed-agents",
+      "title": "New in Claude Managed Agents: run agents on a schedule and store environment variables in vaults",
+      "date": "2026-06-08",
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-08/2026-06-08_whats-new-in-claude-managed-agents.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-08/2026-06-08_whats-new-in-claude-managed-agents.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    },
+    {
+      "url": "https://claude.com/blog/building-with-claude-managed-agents",
+      "title": "The evolution of agentic surfaces: building with Claude Managed Agents",
+      "date": "2026-06-09",
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-09/2026-06-09_building-with-claude-managed-agents.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-09/2026-06-09_building-with-claude-managed-agents.html",
+      "generated_at": "2026-06-13T12:17:15.239Z",
+      "backfill": "2025_to_present"
+    }
+  ],
+  "backfill_2025_completed_at": "2026-06-13T12:19:23.380Z"
+}
