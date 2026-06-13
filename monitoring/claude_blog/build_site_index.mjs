@@ -32,7 +32,8 @@ const html = `<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Claude Blog 分析报告索引</title>
+  <title>Claude 前沿观察 | 技术与企业应用洞察</title>
+  <meta name="description" content="系统追踪 Claude 官方博客，沉淀产品更新、技术实践与企业应用案例的中文分析。">
   <style>
     :root {
       color-scheme: light;
@@ -196,8 +197,8 @@ const html = `<!doctype html>
 <body>
   <header>
     <div class="wrap">
-      <h1>Claude Blog 分析报告索引</h1>
-      <p class="subtitle">收录 Claude Blog 从 ${escapeHtml(index.date_range.start)} 至 ${escapeHtml(index.date_range.end)} 的文章分析，包含整体摘要、技术创新点和企业场景参考。</p>
+      <h1>Claude 前沿观察</h1>
+      <p class="subtitle">系统追踪 Claude 官方博客从 ${escapeHtml(index.date_range.start)} 至 ${escapeHtml(index.date_range.end)} 的产品更新、技术实践与企业应用案例，沉淀可检索的摘要、创新点与落地参考。</p>
       <section class="stats" aria-label="归档统计">
         <div class="stat"><strong>${index.selected_article_count}</strong><span>文章分析</span></div>
         <div class="stat"><strong>${index.generated_report_count}</strong><span>报告文件</span></div>
