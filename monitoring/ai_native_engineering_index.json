@@ -1,0 +1,383 @@
+{
+  "source": "AI Native Engineering Radar external sources",
+  "generated_at": "2026-06-13T23:09:39.777Z",
+  "generated_report_count": 44,
+  "selected_article_count": 22,
+  "generated": [
+    {
+      "source": "Cursor Blog",
+      "source_id": "cursor",
+      "url": "https://cursor.com/blog/agent-autonomy-auto-review",
+      "title": "Governing agent autonomy with Auto-review",
+      "date": "2026-06-11",
+      "priority": "P0",
+      "focus_areas": [
+        "AI for Software Engineering",
+        "Agent Systems",
+        "Evaluation Systems"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-11/2026-06-11_agent-autonomy-auto-review.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-11/2026-06-11_agent-autonomy-auto-review.html",
+      "generated_at": "2026-06-13T17:11:25.488Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "GitHub Changelog",
+      "source_id": "github",
+      "url": "https://github.blog/changelog/2026-06-11-github-agentic-workflows-is-now-in-public-preview/",
+      "title": "GitHub Agentic Workflows is now in public preview",
+      "date": "2026-06-11",
+      "priority": "P0",
+      "focus_areas": [
+        "Agent Systems",
+        "AI for Software Engineering",
+        "大规模工程实践"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-11/2026-06-11_github-agentic-workflows-is-now-in-public-preview.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-11/2026-06-11_github-agentic-workflows-is-now-in-public-preview.html",
+      "generated_at": "2026-06-13T17:11:25.488Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "url": "https://arxiv.org/abs/2606.13681",
+      "title": "EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments",
+      "date": "2026-06-11",
+      "priority": "P1",
+      "focus_areas": [
+        "Evaluation Systems",
+        "Agent Systems",
+        "Software Engineering Research"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-11/2026-06-11_evoarena-tracking-memory-evolution-for-robust-llm-agents-in-dynamic-environments.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-11/2026-06-11_evoarena-tracking-memory-evolution-for-robust-llm-agents-in-dynamic-environments.html",
+      "generated_at": "2026-06-13T20:09:46.288Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "GitHub Changelog",
+      "source_id": "github",
+      "url": "https://github.blog/changelog/2026-06-11-agentic-workflows-no-longer-need-a-personal-access-token/",
+      "title": "Agentic workflows no longer need a personal access token",
+      "date": "2026-06-11",
+      "priority": "P1",
+      "focus_areas": [
+        "Agent Systems",
+        "大规模工程实践",
+        "AI for Software Engineering"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-11/2026-06-11_agentic-workflows-no-longer-need-a-personal-access-token.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-11/2026-06-11_agentic-workflows-no-longer-need-a-personal-access-token.html",
+      "generated_at": "2026-06-13T20:09:46.288Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "url": "https://arxiv.org/abs/2606.11864",
+      "title": "CORE-Bench: A Comprehensive Benchmark for Code Retrieval in the Era of Agentic Coding",
+      "date": "2026-06-10",
+      "priority": "P0",
+      "focus_areas": [
+        "Code Intelligence",
+        "Software Engineering Research",
+        "Evaluation Systems",
+        "AI for Software Engineering"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-10/2026-06-10_core-bench.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-10/2026-06-10_core-bench.html",
+      "generated_at": "2026-06-13T23:09:39.777Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "Cursor Blog",
+      "source_id": "cursor",
+      "url": "https://cursor.com/blog/bugbot-updates-june-2026",
+      "title": "Bugbot is now over 3x faster, 22% cheaper, and finds 10% more bugs",
+      "date": "2026-06-10",
+      "priority": "P1",
+      "focus_areas": [
+        "AI for Software Engineering",
+        "Evaluation Systems"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-10/2026-06-10_bugbot-updates-june-2026.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-10/2026-06-10_bugbot-updates-june-2026.html",
+      "generated_at": "2026-06-13T17:11:25.488Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "GitHub Changelog",
+      "source_id": "github",
+      "url": "https://github.blog/changelog/2026-06-09-security-validation-for-third-party-coding-agents/",
+      "title": "Security validation for third-party coding agents",
+      "date": "2026-06-09",
+      "priority": "P1",
+      "focus_areas": [
+        "Agent Systems",
+        "大规模工程实践",
+        "Evaluation Systems"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-09/2026-06-09_security-validation-for-third-party-coding-agents.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-09/2026-06-09_security-validation-for-third-party-coding-agents.html",
+      "generated_at": "2026-06-13T17:11:25.488Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "Cognition Blog",
+      "source_id": "cognition",
+      "url": "https://cognition.ai/blog/frontier-code",
+      "title": "Introducing FrontierCode",
+      "date": "2026-06-08",
+      "priority": "P0",
+      "focus_areas": [
+        "Evaluation Systems",
+        "AI for Software Engineering",
+        "Software Engineering Research"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-08/2026-06-08_frontier-code.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-08/2026-06-08_frontier-code.html",
+      "generated_at": "2026-06-13T20:09:46.288Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "arXiv",
+      "source_id": "arxiv",
+      "url": "https://arxiv.org/abs/2606.07297",
+      "title": "SWE-Explore: Benchmarking How Coding Agents Explore Repositories",
+      "date": "2026-06-05",
+      "priority": "P0",
+      "focus_areas": [
+        "Code Intelligence",
+        "Software Engineering Research",
+        "Evaluation Systems",
+        "AI for Software Engineering"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-05/2026-06-05_swe-explore-benchmarking-how-coding-agents-explore-repositories.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-05/2026-06-05_swe-explore-benchmarking-how-coding-agents-explore-repositories.html",
+      "generated_at": "2026-06-13T17:11:25.488Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "Cursor Blog",
+      "source_id": "cursor",
+      "url": "https://cursor.com/blog/design-mode",
+      "title": "Direct agents with visual prompts in Design Mode",
+      "date": "2026-06-05",
+      "priority": "P1",
+      "focus_areas": [
+        "AI for Software Engineering",
+        "客户端基础架构",
+        "Agent Systems"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-05/2026-06-05_design-mode.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-05/2026-06-05_design-mode.html",
+      "generated_at": "2026-06-13T23:09:39.777Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "Cognition Blog",
+      "source_id": "cognition",
+      "url": "https://cognition.ai/blog/ai-productivity",
+      "title": "Estimating the Productivity of an Autonomous AI Software Engineer",
+      "date": "2026-06-04",
+      "priority": "P1",
+      "focus_areas": [
+        "AI for Software Engineering",
+        "Evaluation Systems",
+        "大规模工程实践"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-04/2026-06-04_ai-productivity.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-04/2026-06-04_ai-productivity.html",
+      "generated_at": "2026-06-13T20:09:46.288Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "GitHub Changelog",
+      "source_id": "github",
+      "url": "https://github.blog/changelog/2026-06-04-agent-tasks-rest-api-now-available-for-copilot-pro-pro-and-max/",
+      "title": "Agent tasks REST API now available for Copilot Pro, Pro+, and Max",
+      "date": "2026-06-04",
+      "priority": "P1",
+      "focus_areas": [
+        "Agent Systems",
+        "AI for Software Engineering",
+        "大规模工程实践"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-04/2026-06-04_agent-tasks-rest-api-now-available-for-copilot-pro-pro-and-max.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-04/2026-06-04_agent-tasks-rest-api-now-available-for-copilot-pro-pro-and-max.html",
+      "generated_at": "2026-06-13T20:09:46.288Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "Cursor Blog",
+      "source_id": "cursor",
+      "url": "https://cursor.com/blog/cloud-agent-lessons",
+      "title": "What we’ve learned building cloud agents",
+      "date": "2026-06-02",
+      "priority": "P0",
+      "focus_areas": [
+        "Agent Systems",
+        "AI for Software Engineering",
+        "大规模工程实践"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_cloud-agent-lessons.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_cloud-agent-lessons.html",
+      "generated_at": "2026-06-13T20:09:46.288Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "Cognition Blog",
+      "source_id": "cognition",
+      "url": "https://cognition.ai/blog/introducing-devin-desktop",
+      "title": "Introducing Devin Desktop",
+      "date": "2026-06-02",
+      "priority": "P1",
+      "focus_areas": [
+        "Agent Systems",
+        "AI for Software Engineering",
+        "大规模工程实践"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_introducing-devin-desktop.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_introducing-devin-desktop.html",
+      "generated_at": "2026-06-13T23:09:39.777Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "GitHub Changelog",
+      "source_id": "github",
+      "url": "https://github.blog/changelog/2026-06-02-extend-github-with-agent-apps/",
+      "title": "Extend GitHub with agent apps",
+      "date": "2026-06-02",
+      "priority": "P1",
+      "focus_areas": [
+        "Agent Systems",
+        "AI for Software Engineering",
+        "大规模工程实践"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_extend-github-with-agent-apps.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_extend-github-with-agent-apps.html",
+      "generated_at": "2026-06-13T23:09:39.777Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "GitHub Changelog",
+      "source_id": "github",
+      "url": "https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/",
+      "title": "Copilot SDK is now generally available",
+      "date": "2026-06-02",
+      "priority": "P1",
+      "focus_areas": [
+        "Agent Systems",
+        "AI for Software Engineering",
+        "大规模工程实践"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_copilot-sdk-is-now-generally-available.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_copilot-sdk-is-now-generally-available.html",
+      "generated_at": "2026-06-13T17:11:25.488Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "OpenAI News",
+      "source_id": "openai",
+      "url": "https://openai.com/index/codex-for-every-role-tool-workflow/",
+      "title": "Codex for every role, tool, and workflow",
+      "date": "2026-06-02",
+      "priority": "P2",
+      "focus_areas": [
+        "AI for Software Engineering",
+        "Agent Systems",
+        "RAG 与知识工程"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_codex-for-every-role-tool-workflow.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_codex-for-every-role-tool-workflow.html",
+      "generated_at": "2026-06-13T17:11:25.488Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "GitHub Changelog",
+      "source_id": "github",
+      "url": "https://github.blog/changelog/2026-06-02-cloud-and-local-sandboxes-for-github-copilot-now-in-public-preview/",
+      "title": "Cloud and local sandboxes for GitHub Copilot now in public preview",
+      "date": "2026-06-02",
+      "priority": "P0",
+      "focus_areas": [
+        "Agent Systems",
+        "AI for Software Engineering",
+        "大规模工程实践"
+      ],
+      "markdown": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_cloud-and-local-sandboxes-for-github-copilot-now-in-public-preview.md",
+      "html": "monthly_report/2026-06/daily_report/2026-06-02/2026-06-02_cloud-and-local-sandboxes-for-github-copilot-now-in-public-preview.html",
+      "generated_at": "2026-06-13T23:09:39.777Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "Cognition Blog",
+      "source_id": "cognition",
+      "url": "https://cognition.ai/blog/testing-development",
+      "title": "Verifying Agentic Development at Scale",
+      "date": "2026-05-29",
+      "priority": "P1",
+      "focus_areas": [
+        "Agent Systems",
+        "Evaluation Systems",
+        "AI for Software Engineering"
+      ],
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-29/2026-05-29_verifying-agentic-development-at-scale.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-29/2026-05-29_verifying-agentic-development-at-scale.html",
+      "generated_at": "2026-06-13T17:11:25.488Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "OpenAI News",
+      "source_id": "openai",
+      "url": "https://openai.com/index/ramp/",
+      "title": "How Ramp engineers accelerate code review with Codex",
+      "date": "2026-05-20",
+      "priority": "P1",
+      "focus_areas": [
+        "AI for Software Engineering",
+        "Agent Systems",
+        "大规模工程实践"
+      ],
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-20/2026-05-20_how-ramp-engineers-accelerate-code-review-with-codex.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-20/2026-05-20_how-ramp-engineers-accelerate-code-review-with-codex.html",
+      "generated_at": "2026-06-13T17:11:25.488Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "OpenAI Engineering",
+      "source_id": "openai",
+      "url": "https://openai.com/index/building-codex-windows-sandbox/",
+      "title": "Building a safe, effective sandbox to enable Codex on Windows",
+      "date": "2026-05-13",
+      "priority": "P0",
+      "focus_areas": [
+        "Agent Systems",
+        "AI for Software Engineering",
+        "大规模工程实践"
+      ],
+      "markdown": "monthly_report/2026-05/daily_report/2026-05-13/2026-05-13_building-codex-windows-sandbox.md",
+      "html": "monthly_report/2026-05/daily_report/2026-05-13/2026-05-13_building-codex-windows-sandbox.html",
+      "generated_at": "2026-06-13T23:09:39.777Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    },
+    {
+      "source": "OpenAI Engineering",
+      "source_id": "openai",
+      "url": "https://openai.com/index/open-source-codex-orchestration-symphony/",
+      "title": "An open-source spec for Codex orchestration: Symphony",
+      "date": "2026-04-27",
+      "priority": "P0",
+      "focus_areas": [
+        "Agent Systems",
+        "AI for Software Engineering",
+        "大规模工程实践"
+      ],
+      "markdown": "monthly_report/2026-04/daily_report/2026-04-27/2026-04-27_open-source-codex-orchestration-symphony.md",
+      "html": "monthly_report/2026-04/daily_report/2026-04-27/2026-04-27_open-source-codex-orchestration-symphony.html",
+      "generated_at": "2026-06-13T23:09:39.777Z",
+      "backfill": "ai_native_monitoring_2026-06-14"
+    }
+  ]
+}

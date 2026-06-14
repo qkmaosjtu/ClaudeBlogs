@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estimating the Productivity of an Autonomous AI Software Engineer - AI Native 工程雷达</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif; line-height: 1.65; color: #18212f; max-width: 960px; margin: 0 auto; padding: 40px 24px; background: #f6f7fa; }
+    main { background: #fff; border: 1px solid #dde3eb; border-radius: 10px; padding: 32px; box-shadow: 0 16px 44px rgba(23,32,51,.08); }
+    h1 { font-size: 30px; line-height: 1.25; margin: 0 0 18px; }
+    h2 { margin-top: 30px; padding-top: 16px; border-top: 1px solid #ebeff4; font-size: 20px; }
+    ul { padding-left: 1.25rem; }
+    li { margin: 8px 0; }
+    .meta { color: #5d6675; font-size: 14px; margin-bottom: 22px; }
+    .badge { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; background: #eef5ff; color: #174ea6; }
+    a { color: #1f6feb; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="meta">Generated at 2026-06-13T20:09:46.288Z · Source <a href="https://cognition.ai/blog/ai-productivity">https://cognition.ai/blog/ai-productivity</a></div>
+  <h1>Estimating the Productivity of an Autonomous AI Software Engineer</h1>
+  <div class="badge">P1</div>
+
+  <h2>源信息</h2>
+  <ul><li>来源：Cognition Blog</li><li>原文标题：Estimating the Productivity of an Autonomous AI Software Engineer</li><li>原文链接：<a href="https://cognition.ai/blog/ai-productivity">https://cognition.ai/blog/ai-productivity</a></li><li>Canonical URL：<a href="https://cognition.ai/blog/ai-productivity">https://cognition.ai/blog/ai-productivity</a></li><li>发布日期：2026-06-04</li><li>检测/生成时间：2026-06-13T20:09:46.288Z</li><li>作者/来源：The Cognition Team</li></ul>
+
+  <h2>P0/P1/P2 价值判断</h2>
+  <ul><li>等级：P1</li><li>判断依据：直接讨论如何在生产环境量化 autonomous coding agent 的真实工程产出，是 engineering ROI 与 eval instrumentation 的关键问题。</li><li>降权/过滤说明：不是泛泛 ROI 营销，而是具体到 session trace、productive-work filter、held-out evaluation 和估计器校准方法。</li></ul>
+
+  <h2>命中关注领域</h2>
+  <ul><li>AI for Software Engineering</li><li>Evaluation Systems</li><li>大规模工程实践</li></ul>
+
+  <h2>整体摘要</h2>
+  <p>Cognition 试图解决一个更接近管理面的问题：不是统计 token、PR 或代码行数，而是估计每个 Devin session 为组织节省了多少“productive engineering hours”。</p><p>它的做法是让一个 estimator agent 回看完整 session trace，先判断产出是否有用，再估计同等输出由人类工程师完成所需时间，并用真实用户的人工估时做校准。</p>
+
+  <h2>技术创新点分析</h2>
+  <ul><li>把 productive engineering hours 设为中间指标，避免被 token、LOC、PR 数这类弱代理误导。</li><li>使用 258 个 session、126 位用户的数据集构建 ground truth，并在 233 个 held-out sessions 上评估估计器。</li><li>估计器读取完整 session trace、PR、用户请求和代码库上下文，而不是只看最终 diff。</li><li>先做 useful/unproductive session filtering，再估算节省工时，减少无效会话对 ROI 的污染。</li><li>以保守方式校准模型，使聚合结果更适合面向企业做 deployment-level 汇总，而非追求单 session 精度。</li></ul>
+
+  <h2>企业场景可参考分析</h2>
+  <ul><li>适合 CTO / 平台团队建设统一 agent ROI 仪表盘，把节省工时、任务类型、仓库分布和失败原因联系起来。</li><li>适合和 code-review、bug-fix、triage、query、migration 等非纯编码任务一起评估，避免把 agent 价值局限于代码产出。</li><li>适合将 session trace 作为审计资产沉淀，为后续预算分配、模型切换和流程优化提供证据。</li></ul>
+
+  <h2>对客户端架构 / 代码理解 / Agent Infra / 研发效能 / 工程自动化的启示</h2>
+  <ul><li>客户端架构：跨端改造、依赖升级、构建修复这类任务常常 effort 大于 diff 大小，小时数估计更能反映真实收益。</li><li>代码理解：如果 estimator 明显优于 lines-changed baseline，说明“调查、定位、权衡”这些非 diff 信号才是工程价值所在。</li><li>Agent Infra：未来 runtime 不仅要记录 token 和工具调用，还要保留足够的 trace 供 productivity / quality eval 回放。</li><li>研发效能：把 merged PR 作为 conservative filter 虽不完美，但提供了比单纯 PR 数更接近有效产出的运营口径。</li><li>工程自动化：组织应同时跟踪 saved hours 与 defect/rollback 指标，否则产出估计会掩盖质量债务。</li></ul>
+
+  <h2>风险限制</h2>
+  <ul><li>ground truth 依赖用户自报工时，天然存在回忆偏差和厂商访谈偏差。</li><li>工程小时不等于业务价值，也不等于质量无损的产出。</li><li>厂商方法主要适合 deployment-level aggregate，不适合精确评价单次 session 或个人绩效。</li></ul>
+
+  <h2>后续跟进行动</h2>
+  <ul><li>跟踪 Cognition 是否开放更多关于 estimator prompt、feature schema 和跨客户误差分布的细节。</li><li>内部若建设 agent ROI 看板，建议从完整 trace、有效产出过滤和 conservative aggregation 三件事开始。</li></ul>
+
+  <h2>原文依据提要</h2>
+  <ul><li>文章明确称系统已在客户处运行，并称其为首个在生产环境自动测量 AI engineering productivity 的系统。</li><li>官方披露数据集包含 258 sessions、126 users，held-out evaluation set 为 233 sessions。</li><li>估计器在 held-out set 上给出 rlog 0.74，并强调总量估计被有意校准为偏保守。</li><li>文中还展示 lines changed 作为单一特征时表现明显较差，说明完整 trace 才是有效信号。</li></ul>
+</main>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # AI Native 工程雷达 Monitor
 
-本目录保存 AI Native 软件工程情报站的监控状态、历史 Claude Blog 回填结果和站点索引生成逻辑。
+本目录保存 AI Native 软件工程情报站的监控状态、历史 Claude Blog 回填结果、多源外部归档结果和站点索引生成逻辑。
 
 ## 定位
 
@@ -34,7 +34,14 @@ monitoring/ai_native_engineering_strategy.json
 
 ## 日更来源
 
-当前历史归档来自 `https://claude.com/blog`。后续每日任务按策略扩展到：
+当前站点已经包含 Claude Blog 历史归档和外部来源补归档。外部来源状态保存在：
+
+```text
+monitoring/ai_native_engineering_seen_articles.json
+monitoring/ai_native_engineering_index.json
+```
+
+已接入来源包括：
 
 - Anthropic / Claude Blog
 - OpenAI News / Research
@@ -46,6 +53,8 @@ monitoring/ai_native_engineering_strategy.json
 ## Detection Contract
 
 - 使用 `monitoring/claude_blog/seen_articles.json` 作为 Claude Blog 的持久状态文件。
+- 使用 `monitoring/ai_native_engineering_seen_articles.json` 作为外部多源的持久状态文件。
+- 使用 `monitoring/ai_native_engineering_index.json` 作为外部多源报告索引；新增外部报告后必须同步更新该索引。
 - 每次运行应读取 `monitoring/ai_native_engineering_strategy.json`，按 A/B/C 关注领域和 P0/P1/P2 规则判断文章价值。
 - 对重点来源提取 canonical URL、标题、发布日期、作者或来源、分类/标签和正文摘要。
 - 同一 canonical URL 不重复生成报告。
@@ -86,7 +95,14 @@ node monitoring/claude_blog/build_site_index.mjs
 - P0/P1/P2 优先级。
 - A/B/C 关注领域。
 - 命中信号和相关度分数。
-- 月份、领域、优先级和全文检索过滤器。
+- 来源、月份、领域、优先级和全文检索过滤器。
+
+索引页读取两类索引：
+
+```text
+monitoring/claude_blog/backfill_2025_index.json
+monitoring/ai_native_engineering_index.json
+```
 
 ## Backfill
 

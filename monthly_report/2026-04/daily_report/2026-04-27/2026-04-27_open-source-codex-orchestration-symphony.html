@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>An open-source spec for Codex orchestration: Symphony - AI Native 工程雷达</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif; line-height: 1.7; color: #1f2430; max-width: 920px; margin: 0 auto; padding: 40px 24px; background: #f7f8fb; }
+    main { background: #fff; border: 1px solid #dfe5ee; border-radius: 14px; padding: 32px; box-shadow: 0 18px 48px rgba(20, 28, 45, 0.08); }
+    h1 { font-size: 30px; line-height: 1.25; margin: 0 0 18px; }
+    h2 { margin-top: 28px; padding-top: 18px; border-top: 1px solid #edf1f6; font-size: 20px; }
+    p, li { font-size: 16px; }
+    ul { padding-left: 1.35rem; }
+    li { margin: 8px 0; }
+    a { color: #1d5fd0; }
+    .meta { color: #627089; font-size: 14px; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+<main>
+<div class="meta">Generated at 2026-06-13T23:09:39.777Z from <a href="https://openai.com/index/open-source-codex-orchestration-symphony/">https://openai.com/index/open-source-codex-orchestration-symphony/</a></div>
+<h1>An open-source spec for Codex orchestration: Symphony</h1>
+<h2>源信息</h2>
+<ul>
+<li>来源：OpenAI Engineering</li>
+<li>原文标题：An open-source spec for Codex orchestration: Symphony</li>
+<li>原文链接：https://openai.com/index/open-source-codex-orchestration-symphony/</li>
+<li>Canonical URL：https://openai.com/index/open-source-codex-orchestration-symphony/</li>
+<li>发布日期：2026-04-27</li>
+<li>检测/生成时间：2026-06-13T23:09:39.777Z</li>
+</ul>
+<h2>P0/P1/P2 价值判断</h2>
+<ul>
+<li>等级：P0</li>
+<li>判断依据：直接命中 agent orchestrator、workflow/runtime、issue tracker control plane 和多任务并发执行，是典型的 Agent Infra 与工程平台化信号。</li>
+</ul>
+<h2>命中关注领域</h2>
+<ul>
+<li>Agent Systems</li>
+<li>AI for Software Engineering</li>
+<li>大规模工程实践</li>
+</ul>
+<h2>整体摘要</h2>
+<p>
+OpenAI 把 Symphony 定义成一份开源 orchestration spec，用任务系统而不是聊天会话来管理 coding agents。核心思想是把 Linear 之类的 issue tracker 变成控制平面，让每个开放任务都对应一个持续运行的 agent。
+</p>
+<p>
+这篇文章最重要的变化不在模型能力，而在工程控制面抽象：任务、状态、并发、重试、workspace、handoff、workflow policy 都被显式化，目标是把 agent 从交互式工具升级为长期运行的工程执行单元。
+</p>
+<h2>技术创新点分析</h2>
+<ul>
+<li><strong>任务系统替代会话系统</strong>：文章明确提出从“管理多个 Codex session”转向“让任务系统驱动 agent dispatch”，把 issue 状态机变成 agent orchestration 的主抽象。</li>
+<li><strong>最小 spec 而非重型平台</strong>：Symphony 本身被压缩成 `SPEC.md` + `WORKFLOW.md` 这类可版本化规范，说明 orchestration 逻辑可以先由规范驱动，再逐步产品化。</li>
+<li><strong>长运行和失败恢复设计</strong>：文章强调持续轮询、workspace 持久化、卡住自动重启、blocked task DAG 调度，这些都属于真正的 runtime 能力而不是 UI 功能。</li>
+<li><strong>App Server 级接入</strong>：OpenAI 明确使用 Codex app server mode 和 JSON-RPC 接口，说明编排层面开始依赖可编程 agent harness，而不是人工驱动 CLI。</li>
+</ul>
+<h2>企业场景可参考分析</h2>
+<ul>
+<li><strong>内部开发平台</strong>：适合把 Jira、Linear、GitHub Issues 变成 agent 控制面，先覆盖低风险的调查、修复、文档和跨仓库改动。</li>
+<li><strong>Monorepo 迁移工程</strong>：文章提到 React 升级依赖 Vite 迁移的 blocked DAG，说明它适合大型基础设施改造与分阶段迁移。</li>
+<li><strong>跨职能需求入口</strong>：产品经理和设计师可以直接投递任务，工程团队只在 review/handoff 介入，降低 agent 使用门槛。</li>
+</ul>
+<h2>对客户端架构 / 代码理解 / Agent Infra / 研发效能 / 工程自动化的启示</h2>
+<ul>
+<li><strong>客户端架构</strong>：客户端基础设施升级通常依赖多仓库和多阶段迁移，Symphony 这种 ticket-driven orchestration 比单 session 代理更贴近真实组织流程。</li>
+<li><strong>代码理解</strong>：让 agent 长时间跑在任务流里，意味着 repo understanding 不再是单次检索，而是与任务状态、历史 PR、CI 反馈联动。</li>
+<li><strong>Agent Infra</strong>：值得重点关注 per-task workspace、state machine、retry/backoff、workflow policy in repo 这些 runtime 设计模式。</li>
+<li><strong>研发效能</strong>：文章声称部分团队 landed PR 提升 500%，即使具体数字需谨慎看待，也说明上下文切换和人工督工本身是主要瓶颈。</li>
+<li><strong>工程自动化</strong>：把 review packet、视频、PR、状态流转全部纳入 agent loop，意味着自动化对象从“代码生成”扩展到“交付流程编排”。</li>
+</ul>
+<h2>风险限制</h2>
+<ul>
+<li>500% PR 增长来自 OpenAI 内部团队经验，不能直接外推到普通组织。</li>
+<li>Symphony 是 reference spec 而非长期维护产品，企业需要自行实现权限、安全和可观测性要求。</li>
+<li>如果 issue 质量、测试护栏和 review 机制不够强，持续运行的 agent 可能放大错误吞吐。</li>
+</ul>
+<h2>后续跟进行动</h2>
+<ul>
+<li>跟踪 Symphony 开源仓库是否沉淀出可复用的 state schema、workspace lifecycle 和 evaluator 接口。</li>
+<li>评估内部 issue tracker 是否足够结构化，能否支持 blocked DAG、handoff 状态和 agent-only 阶段。</li>
+<li>把现有自动化流程拆成 ticket-driven PoC，优先选择调查、批量重构、依赖升级等任务密集型场景。</li>
+</ul>
+<h2>原文依据提要</h2>
+<ul>
+<li>OpenAI 明确写到 Symphony 把 Linear 这样的 task board 变成 coding agents 的 control plane。</li>
+<li>文章说明每个 open task 都有 dedicated agent workspace，并由 orchestrator 持续监测、重启、并行调度。</li>
+<li>原文给出了 `SPEC.md`、`WORKFLOW.md`、Codex app server mode 和 JSON-RPC 接口这几项关键工程实现线索。</li>
+</ul>
+</main>
+</body>
+</html>

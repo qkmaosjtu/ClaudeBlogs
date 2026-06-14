@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Governing agent autonomy with Auto-review - AI Native 工程雷达</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif; line-height: 1.65; color: #18212f; max-width: 960px; margin: 0 auto; padding: 40px 24px; background: #f6f7fa; }
+    main { background: #fff; border: 1px solid #dde3eb; border-radius: 10px; padding: 32px; box-shadow: 0 16px 44px rgba(23,32,51,.08); }
+    h1 { font-size: 30px; line-height: 1.25; margin: 0 0 18px; }
+    h2 { margin-top: 30px; padding-top: 16px; border-top: 1px solid #ebeff4; font-size: 20px; }
+    ul { padding-left: 1.25rem; }
+    li { margin: 8px 0; }
+    .meta { color: #5d6675; font-size: 14px; margin-bottom: 22px; }
+    .badge { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; background: #eef5ff; color: #174ea6; }
+    a { color: #1f6feb; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="meta">Generated at 2026-06-13T17:11:25.488Z · Source <a href="https://cursor.com/blog/agent-autonomy-auto-review">https://cursor.com/blog/agent-autonomy-auto-review</a></div>
+  <h1>Governing agent autonomy with Auto-review</h1>
+  <div class="badge">P0</div>
+
+  <h2>源信息</h2>
+  <ul><li>来源：Cursor Blog</li><li>原文标题：Governing agent autonomy with Auto-review</li><li>原文链接：<a href="https://cursor.com/blog/agent-autonomy-auto-review">https://cursor.com/blog/agent-autonomy-auto-review</a></li><li>Canonical URL：<a href="https://cursor.com/blog/agent-autonomy-auto-review">https://cursor.com/blog/agent-autonomy-auto-review</a></li><li>发布日期：2026-06-11</li><li>检测/生成时间：2026-06-13T17:11:25.488Z</li></ul>
+
+  <h2>P0/P1/P2 价值判断</h2>
+  <ul><li>等级：P0</li><li>判断依据：直接命中 Agent Runtime 治理、自动化边界和评估闭环，不是应用层 agent 包装，而是生产级 coding agent 的 autonomy 控制面。</li></ul>
+
+  <h2>命中关注领域</h2>
+  <ul><li>AI for Software Engineering</li><li>Agent Systems</li><li>Evaluation Systems</li></ul>
+
+  <h2>整体摘要</h2>
+  <p>Cursor 把 Auto-review 定义为一个治理层：本地 agent 在低风险动作上可以继续自动推进，一旦动作跨过有意义的风险边界，就由 classifier agent 触发减速、解释和人工 review。</p><p>这篇文章的价值不在“又加了一个 review 按钮”，而在它把 autonomy policy、risk classification 和 developer handoff 做成了一个连续控制面，说明 coding agent 的下一个竞争点已经从“能做什么”转向“在什么边界内可靠地做”。</p>
+
+  <h2>技术创新点分析</h2>
+  <ul><li>用专门的 classifier agent 给自主执行做分级，而不是只有全自动 / 全人工两个档位。</li><li>把“是否需要人类介入”做成 runtime 判定问题，说明 agent harness 已经从提示层走向执行治理层。</li><li>文章强调低风险动作继续流动、高风险动作强制显式 review，这对减少上下文中断尤其关键。</li></ul>
+
+  <h2>企业场景可参考分析</h2>
+  <ul><li>适合大型仓库里的常规改动、低风险重构、测试补全和格式化清理，让 agent 先跑，再把真正需要判断的节点抛给人。</li><li>适合平台团队给不同仓库、目录、语言层级设置不同 autonomy policy，而不是要求所有团队共享一套固定阈值。</li><li>适合与代码所有权、分支保护、CI 风险标签联动，形成研发组织可审计的自动化边界。</li></ul>
+
+  <h2>对客户端架构 / 代码理解 / Agent Infra / 研发效能 / 工程自动化的启示</h2>
+  <ul><li><strong>客户端架构</strong>：客户端架构团队可以把 UI 目录、公共组件、构建脚本和发布配置映射成不同风险等级，让 agent 在低风险层自动修改，在跨端基础设施层强制 review。</li><li><strong>代码理解</strong>：治理前提是 agent 能判断变更影响面，因此这类机制会倒逼更好的 call graph、ownership 和 dependency understanding。</li><li><strong>Agent Infra</strong>：最值得关注的是 classifier-in-the-loop 设计，它本质上是 agent runtime 的 policy engine。</li><li><strong>研发效能</strong>：减少“所有动作都弹确认框”的噪音，让人工注意力只花在高价值决策上。</li><li><strong>工程自动化</strong>：后续可以把 review policy 接到 hooks、CI 结果、测试覆盖率和安全扫描，形成多信号自动放行。</li></ul>
+
+  <h2>风险限制</h2>
+  <ul><li>文章没有公开 classifier 的误报/漏报细节，落地时必须自行验证是否会把高风险动作误判为低风险。</li><li>如果风险分级只看局部 diff 而不看仓库上下文，容易低估跨模块影响。</li><li>这类治理层如果不保留审计日志，后续很难复盘 agent 为什么被放行或拦截。</li></ul>
+
+  <h2>后续跟进行动</h2>
+  <ul><li>持续跟踪 Cursor 是否公布 classifier 评估集、误报率和组织级 policy 配置方式。</li><li>对照内部代码库设计一版 autonomy 分层策略：文本编辑、测试、依赖、发布配置分别设边界。</li></ul>
+
+  <h2>原文依据提要</h2>
+  <ul><li>官方摘要指出 Auto-review 用 classifier agent 治理 local agent autonomy，让低风险动作自由执行，越过重要边界时再减速。</li><li>正文把核心问题定义为“何时让 agent 继续前进、何时强制显式 review”，说明目标是 runtime governance，不是单点功能。</li></ul>
+</main>
+</body>
+</html>

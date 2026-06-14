@@ -1,12 +1,29 @@
 #!/usr/bin/env node
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 
-const index = JSON.parse(readFileSync("monitoring/claude_blog/backfill_2025_index.json", "utf8"));
+function readJsonIfExists(path) {
+  return existsSync(path) ? JSON.parse(readFileSync(path, "utf8")) : null;
+}
+
+const indexes = [
+  readJsonIfExists("monitoring/claude_blog/backfill_2025_index.json"),
+  readJsonIfExists("monitoring/ai_native_engineering_index.json"),
+].filter(Boolean);
 const strategy = JSON.parse(readFileSync("monitoring/ai_native_engineering_strategy.json", "utf8"));
-const articles = index.generated.slice().sort((a, b) => `${b.date} ${b.title}`.localeCompare(`${a.date} ${a.title}`));
+const articles = indexes
+  .flatMap((index) => (Array.isArray(index.generated) ? index.generated : []))
+  .sort((a, b) => `${b.date} ${b.title}`.localeCompare(`${a.date} ${a.title}`));
+const totalArticleCount = articles.length;
+const latestGeneratedAt = indexes
+  .map((index) => index.generated_at || "")
+  .filter(Boolean)
+  .sort()
+  .at(-1) || "";
+const archiveSources = indexes.map((index) => index.source).filter(Boolean);
 const months = Array.from(new Set(articles.map((item) => item.date.slice(0, 7)))).sort().reverse();
 const priorityRules = Object.fromEntries(strategy.priorityRules.map((rule) => [rule.id, rule]));
+const focusAreasByLabel = Object.fromEntries(strategy.focusAreas.map((area) => [area.label, area]));
 const levelWeight = { A: 5, B: 3, C: 1 };
 
 function escapeHtml(value = "") {
@@ -29,6 +46,21 @@ function findMatches(haystack, terms) {
   return unique(terms).filter((term) => haystack.includes(normalize(term)));
 }
 
+function inferSource(article) {
+  if (article.source) return article.source;
+  if (article.url?.includes("claude.com")) return "Anthropic / Claude Blog";
+  if (article.url?.includes("openai.com")) return "OpenAI";
+  if (article.url?.includes("github.blog")) return "GitHub";
+  if (article.url?.includes("cursor.com")) return "Cursor";
+  if (article.url?.includes("cognition.ai")) return "Cognition";
+  if (article.url?.includes("arxiv.org")) return "arXiv";
+  return "Unknown Source";
+}
+
+function sourceKey(source) {
+  return normalize(source).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "unknown";
+}
+
 function scoreArea(haystack, area) {
   const terms = [...area.keywords, ...(area.companies || [])];
   const matches = findMatches(haystack, terms);
@@ -37,13 +69,23 @@ function scoreArea(haystack, area) {
 }
 
 function classifyArticle(article) {
+  const source = inferSource(article);
   const haystack = normalize(`${article.title}\n${article.url}`);
   const areaScores = strategy.focusAreas
     .map((area) => scoreArea(haystack, area))
     .filter((area) => area.score > 0)
     .sort((a, b) => b.score - a.score || (levelWeight[b.level] || 0) - (levelWeight[a.level] || 0));
+  const explicitAreas = (article.focus_areas || [])
+    .map((label) => focusAreasByLabel[label])
+    .filter(Boolean)
+    .map((area) => ({
+      ...area,
+      matches: [area.label],
+      score: Math.max(area.keywords.length, 1) * (levelWeight[area.level] || 1)
+    }));
+  const scoredAreas = explicitAreas.length > 0 ? explicitAreas : areaScores;
   const primaryArea =
-    areaScores[0] ||
+    scoredAreas[0] ||
     {
       id: "watchlist",
       level: "C",
@@ -56,10 +98,10 @@ function classifyArticle(article) {
   const p0Matches = findMatches(haystack, priorityRules.P0.triggers);
   const p1Matches = findMatches(haystack, priorityRules.P1.triggers);
   const p2Matches = findMatches(haystack, priorityRules.P2.triggers);
-  let priority = "P2";
-  if (p0Matches.length > 0) {
+  let priority = article.priority && priorityRules[article.priority] ? article.priority : "P2";
+  if (!article.priority && p0Matches.length > 0) {
     priority = "P0";
-  } else if (p1Matches.length > 0 || primaryArea.level === "A" || primaryArea.level === "B") {
+  } else if (!article.priority && (p1Matches.length > 0 || primaryArea.level === "A" || primaryArea.level === "B")) {
     priority = "P1";
   }
 
@@ -72,26 +114,43 @@ function classifyArticle(article) {
         primaryArea.score * 5 +
         p0Matches.length * 12 +
         p1Matches.length * 7 +
-        areaScores.length * 4 -
+        scoredAreas.length * 4 -
         loweredSignals.length * 10
     )
   );
 
   return {
     ...article,
+    source,
+    source_id: article.source_id || sourceKey(source),
     classification: {
       priority,
       priorityLabel: priorityRules[priority].label,
       primaryArea,
-      areaScores,
+      areaScores: scoredAreas,
       relevance,
-      signals: unique([...p0Matches, ...p1Matches, ...p2Matches, ...primaryArea.matches]).slice(0, 6),
+      signals: unique([
+        ...p0Matches,
+        ...p1Matches,
+        ...p2Matches,
+        ...primaryArea.matches,
+        ...(article.focus_areas || [])
+      ]).slice(0, 6),
       loweredSignals
     }
   };
 }
 
 const enrichedArticles = articles.map(classifyArticle);
+const sourceCounts = Object.entries(
+  enrichedArticles.reduce((acc, article) => {
+    const source = inferSource(article);
+    acc[source] = (acc[source] || 0) + 1;
+    return acc;
+  }, {})
+)
+  .map(([source, count]) => ({ source, key: sourceKey(source), count }))
+  .sort((a, b) => b.count - a.count || a.source.localeCompare(b.source));
 const priorityCounts = strategy.priorityRules.map((rule) => ({
   ...rule,
   count: enrichedArticles.filter((article) => article.classification.priority === rule.id).length
@@ -123,16 +182,17 @@ function articleCard(article) {
   const { classification } = article;
   const signals = classification.signals.length ? classification.signals : ["低频观察"];
   const searchText = normalize(
-    `${article.title} ${article.date} ${article.url} ${classification.priorityLabel} ${classification.primaryArea.label} ${signals.join(" ")}`
+    `${article.title} ${article.date} ${article.url} ${article.source} ${classification.priorityLabel} ${classification.primaryArea.label} ${signals.join(" ")}`
   );
 
-  return `<article class="report-card" data-month="${escapeHtml(month)}" data-priority="${escapeHtml(classification.priority)}" data-area="${escapeHtml(classification.primaryArea.id)}" data-search="${escapeHtml(searchText)}">
+  return `<article class="report-card" data-month="${escapeHtml(month)}" data-priority="${escapeHtml(classification.priority)}" data-area="${escapeHtml(classification.primaryArea.id)}" data-source="${escapeHtml(sourceKey(article.source))}" data-search="${escapeHtml(searchText)}">
     <div class="card-top">
       <span class="date">${escapeHtml(article.date)}</span>
       ${priorityBadge(classification.priority)}
     </div>
     <h2>${escapeHtml(article.title)}</h2>
     <div class="meta-row">
+      <span class="badge source-badge">${escapeHtml(article.source)}</span>
       ${areaBadge(classification.primaryArea)}
       <span class="score">${classification.relevance} 分</span>
     </div>
@@ -169,11 +229,12 @@ function priorityCard(rule) {
 }
 
 function sourceList() {
+  const countsByName = new Map(sourceCounts.map((item) => [item.source, item.count]));
   return strategy.watchSources
     .map(
       (source) => `<li>
         <a href="${escapeHtml(source.url)}" target="_blank" rel="noopener">${escapeHtml(source.name)}</a>
-        <span>${escapeHtml(source.coverage)}</span>
+        <span>${escapeHtml(source.coverage)}${countsByName.has(source.name) ? ` · 已归档 ${countsByName.get(source.name)} 篇` : ""}</span>
       </li>`
     )
     .join("");
@@ -332,7 +393,7 @@ const html = `<!doctype html>
     }
     .toolbar-grid {
       display: grid;
-      grid-template-columns: 1fr 170px 220px 170px;
+      grid-template-columns: minmax(240px, 1fr) 150px 210px 190px 150px;
       gap: 12px;
       align-items: center;
     }
@@ -378,6 +439,7 @@ const html = `<!doctype html>
     .badge.p0 { background: #fff1f1; color: var(--red); }
     .badge.p1 { background: #eef7f3; color: var(--green); }
     .badge.p2 { background: #fff8e8; color: var(--amber); }
+    .badge.source-badge { background: #eef2f7; color: #475467; }
     .badge.level-a { background: #eef5ff; color: var(--blue-strong); }
     .badge.level-b { background: #f1edff; color: var(--violet); }
     .badge.level-c { background: #fff8e8; color: var(--amber); }
@@ -440,14 +502,14 @@ const html = `<!doctype html>
     }
     @media (max-width: 1040px) {
       .priority-grid, .focus-grid, .reports { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .toolbar-grid { grid-template-columns: 1fr 160px 1fr; }
-      .toolbar-grid select:last-child { grid-column: span 3; }
+      .toolbar-grid { grid-template-columns: 1fr 1fr; }
+      .toolbar-grid input { grid-column: span 2; }
       .source-panel { grid-template-columns: 1fr; }
     }
     @media (max-width: 680px) {
       header { padding-top: 34px; }
       .stats, .priority-grid, .focus-grid, .reports, .toolbar-grid { grid-template-columns: 1fr; }
-      .toolbar-grid select:last-child { grid-column: auto; }
+      .toolbar-grid input { grid-column: auto; }
       .section-head { display: block; }
       .report-card { min-height: 0; }
     }
@@ -460,10 +522,10 @@ const html = `<!doctype html>
       <h1>${escapeHtml(strategy.site.title)}</h1>
       <p class="subtitle">${escapeHtml(strategy.site.description)}</p>
       <section class="stats" aria-label="归档统计">
-        <div class="stat"><strong>${index.selected_article_count}</strong><span>已分析文章</span></div>
+        <div class="stat"><strong>${totalArticleCount}</strong><span>已分析文章</span></div>
         <div class="stat"><strong>${priorityCounts.find((item) => item.id === "P0").count}</strong><span>P0 高优先级信号</span></div>
-        <div class="stat"><strong>${months.length}</strong><span>归档月份</span></div>
-        <div class="stat"><strong>${escapeHtml(index.generated_at.slice(0, 10))}</strong><span>最后生成</span></div>
+        <div class="stat"><strong>${sourceCounts.length}</strong><span>已接入来源</span></div>
+        <div class="stat"><strong>${escapeHtml(latestGeneratedAt.slice(0, 10))}</strong><span>最后生成</span></div>
       </section>
     </div>
   </header>
@@ -513,6 +575,10 @@ const html = `<!doctype html>
         <option value="">全部关注领域</option>
         ${visibleAreas.map((area) => `<option value="${escapeHtml(area.id)}">${escapeHtml(area.level)}级 · ${escapeHtml(area.label)}</option>`).join("")}
       </select>
+      <select id="source" aria-label="按来源筛选">
+        <option value="">全部来源</option>
+        ${sourceCounts.map((item) => `<option value="${escapeHtml(item.key)}">${escapeHtml(item.source)} · ${item.count}</option>`).join("")}
+      </select>
       <select id="month" aria-label="按月份筛选">
         <option value="">全部月份</option>
         ${months.map((month) => `<option value="${escapeHtml(month)}">${escapeHtml(month)}</option>`).join("")}
@@ -529,13 +595,14 @@ const html = `<!doctype html>
     </div>
   </main>
   <footer>
-    <div class="wrap">Archive source: <a href="${escapeHtml(index.source)}" target="_blank" rel="noopener">${escapeHtml(index.source)}</a>. Strategy: <code>monitoring/ai_native_engineering_strategy.json</code>.</div>
+    <div class="wrap">Archive sources: ${archiveSources.map((source) => `<span>${escapeHtml(source)}</span>`).join(" / ")}. Strategy: <code>monitoring/ai_native_engineering_strategy.json</code>.</div>
   </footer>
   <script>
     const search = document.getElementById('search');
     const month = document.getElementById('month');
     const priority = document.getElementById('priority');
     const area = document.getElementById('area');
+    const source = document.getElementById('source');
     const cards = Array.from(document.querySelectorAll('.report-card'));
     const empty = document.getElementById('empty');
     function applyFilters() {
@@ -543,13 +610,15 @@ const html = `<!doctype html>
       const m = month.value;
       const p = priority.value;
       const a = area.value;
+      const s = source.value;
       let visible = 0;
       for (const card of cards) {
         const matchSearch = !q || card.dataset.search.includes(q);
         const matchMonth = !m || card.dataset.month === m;
         const matchPriority = !p || card.dataset.priority === p;
         const matchArea = !a || card.dataset.area === a;
-        const show = matchSearch && matchMonth && matchPriority && matchArea;
+        const matchSource = !s || card.dataset.source === s;
+        const show = matchSearch && matchMonth && matchPriority && matchArea && matchSource;
         card.hidden = !show;
         if (show) visible += 1;
       }
@@ -559,6 +628,7 @@ const html = `<!doctype html>
     month.addEventListener('change', applyFilters);
     priority.addEventListener('change', applyFilters);
     area.addEventListener('change', applyFilters);
+    source.addEventListener('change', applyFilters);
   </script>
 </body>
 </html>

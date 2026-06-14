@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloud and local sandboxes for GitHub Copilot now in public preview - AI Native 工程雷达</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif; line-height: 1.7; color: #1f2430; max-width: 920px; margin: 0 auto; padding: 40px 24px; background: #f7f8fb; }
+    main { background: #fff; border: 1px solid #dfe5ee; border-radius: 14px; padding: 32px; box-shadow: 0 18px 48px rgba(20, 28, 45, 0.08); }
+    h1 { font-size: 30px; line-height: 1.25; margin: 0 0 18px; }
+    h2 { margin-top: 28px; padding-top: 18px; border-top: 1px solid #edf1f6; font-size: 20px; }
+    p, li { font-size: 16px; }
+    ul { padding-left: 1.35rem; }
+    li { margin: 8px 0; }
+    a { color: #1d5fd0; }
+    .meta { color: #627089; font-size: 14px; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+<main>
+<div class="meta">Generated at 2026-06-13T23:09:39.777Z from <a href="https://github.blog/changelog/2026-06-02-cloud-and-local-sandboxes-for-github-copilot-now-in-public-preview/">https://github.blog/changelog/2026-06-02-cloud-and-local-sandboxes-for-github-copilot-now-in-public-preview/</a></div>
+<h1>Cloud and local sandboxes for GitHub Copilot now in public preview</h1>
+<h2>源信息</h2>
+<ul>
+<li>来源：GitHub Changelog</li>
+<li>原文标题：Cloud and local sandboxes for GitHub Copilot now in public preview</li>
+<li>原文链接：https://github.blog/changelog/2026-06-02-cloud-and-local-sandboxes-for-github-copilot-now-in-public-preview/</li>
+<li>Canonical URL：https://github.blog/changelog/2026-06-02-cloud-and-local-sandboxes-for-github-copilot-now-in-public-preview/</li>
+<li>发布日期：2026-06-02</li>
+<li>检测/生成时间：2026-06-13T23:09:39.777Z</li>
+</ul>
+<h2>P0/P1/P2 价值判断</h2>
+<ul>
+<li>等级：P0</li>
+<li>判断依据：命中 secure execution layer、cloud/local sandbox、governance 与 policy controls，是典型的 agent runtime 基础设施更新。</li>
+</ul>
+<h2>命中关注领域</h2>
+<ul>
+<li>Agent Systems</li>
+<li>AI for Software Engineering</li>
+<li>大规模工程实践</li>
+</ul>
+<h2>整体摘要</h2>
+<p>
+GitHub 把 Copilot 的执行环境产品化为统一的 local sandbox 和 cloud sandbox，两者都服务于 agentic development 的安全执行层。它不只是“让模型能跑命令”，而是把代码、工具、文件系统和网络访问放进可治理的隔离边界里。
+</p>
+<p>
+对大团队而言，这意味着 agent 自动化终于有了与企业治理体系兼容的默认承载层，能够复用组织已有的身份、策略与隔离控制。
+</p>
+<h2>技术创新点分析</h2>
+<ul>
+<li><strong>执行层被显式产品化</strong>：GitHub 直接把 sandbox 定义为 agentic development 的 foundational infrastructure，而不是某个隐形实现细节。</li>
+<li><strong>本地与云侧策略统一</strong>：本地沙箱和 `copilot --cloud` 云侧 Linux sandbox 共享同一套 Copilot cloud agent policy 思路，降低组织治理碎片化。</li>
+<li><strong>与现有控制面联动</strong>：文章强调 cloud session 继承已有 cloud agent policies，说明执行环境与组织政策、身份、成本管理开始整合。</li>
+</ul>
+<h2>企业场景可参考分析</h2>
+<ul>
+<li><strong>受监管开发环境</strong>：适合对源码、网络访问和工具调用有合规要求的企业先把 agent 放在沙箱内试点。</li>
+<li><strong>平台团队统一基线</strong>：可以作为本地 IDE agent、CLI agent 和云端 batch agent 的公共执行层。</li>
+<li><strong>多仓库自动化</strong>：当 agent 开始读写真实仓库、执行测试和联网依赖安装时，sandbox 成为默认门槛，而不是附加选项。</li>
+</ul>
+<h2>对客户端架构 / 代码理解 / Agent Infra / 研发效能 / 工程自动化的启示</h2>
+<ul>
+<li><strong>客户端架构</strong>：面向桌面 IDE、CLI 与云端 agent 协同的客户端平台，需要把 local/cloud sandbox 视作同一产品能力而非分裂功能。</li>
+<li><strong>代码理解</strong>：repo understanding 的价值只有在受控执行环境里才能持续转化为安全自动化。</li>
+<li><strong>Agent Infra</strong>：隔离、身份、策略继承、session provisioning 和 ephemeral environment 将成为通用 runtime 组件。</li>
+<li><strong>研发效能</strong>：统一沙箱能减少平台安全团队对 agent 自动化的阻力，缩短试点落地时间。</li>
+<li><strong>工程自动化</strong>：未来 CI agent、IDE agent、workflow agent 可能都会建立在同类 sandbox substrate 之上。</li>
+</ul>
+<h2>风险限制</h2>
+<ul>
+<li>public preview 阶段的能力边界、性能和计费模型仍可能变化。</li>
+<li>云沙箱能否满足企业定制镜像、私有依赖和内网访问要求，官方更新里还没有展开。</li>
+<li>如果组织没有清晰的 policy inheritance 与审计机制，沙箱仍可能被当作黑盒执行环境。</li>
+</ul>
+<h2>后续跟进行动</h2>
+<ul>
+<li>继续跟踪 GitHub 对 local sandbox 的 OS 支持范围、审计日志和 policy schema 的公开细节。</li>
+<li>比较 GitHub sandboxes 与 OpenAI/Anthropic/Cursor 在本地执行隔离上的设计差异。</li>
+<li>梳理企业内部哪些 agent 场景必须要求 sandbox 才能进入生产。</li>
+</ul>
+<h2>原文依据提要</h2>
+<ul>
+<li>官方描述写明 Copilot 可以在 secure, isolated sandboxes 中运行，覆盖 local 和 cloud 两种模式。</li>
+<li>文章把 agentic development 描述为 interactive、stateful、parallel，因此需要专门的 execution layer。</li>
+<li>云沙箱通过 `copilot --cloud` 启动，并继承组织现有的 Copilot cloud agent policies。</li>
+</ul>
+</main>
+</body>
+</html>

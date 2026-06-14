@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CORE-Bench: A Comprehensive Benchmark for Code Retrieval in the Era of Agentic Coding - AI Native 工程雷达</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif; line-height: 1.7; color: #1f2430; max-width: 920px; margin: 0 auto; padding: 40px 24px; background: #f7f8fb; }
+    main { background: #fff; border: 1px solid #dfe5ee; border-radius: 14px; padding: 32px; box-shadow: 0 18px 48px rgba(20, 28, 45, 0.08); }
+    h1 { font-size: 30px; line-height: 1.25; margin: 0 0 18px; }
+    h2 { margin-top: 28px; padding-top: 18px; border-top: 1px solid #edf1f6; font-size: 20px; }
+    p, li { font-size: 16px; }
+    ul { padding-left: 1.35rem; }
+    li { margin: 8px 0; }
+    a { color: #1d5fd0; }
+    .meta { color: #627089; font-size: 14px; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+<main>
+<div class="meta">Generated at 2026-06-13T23:09:39.777Z from <a href="https://arxiv.org/abs/2606.11864">https://arxiv.org/abs/2606.11864</a></div>
+<h1>CORE-Bench: A Comprehensive Benchmark for Code Retrieval in the Era of Agentic Coding</h1>
+<h2>源信息</h2>
+<ul>
+<li>来源：arXiv</li>
+<li>原文标题：CORE-Bench: A Comprehensive Benchmark for Code Retrieval in the Era of Agentic Coding</li>
+<li>原文链接：https://arxiv.org/abs/2606.11864</li>
+<li>Canonical URL：https://arxiv.org/abs/2606.11864</li>
+<li>发布日期：2026-06-10</li>
+<li>检测/生成时间：2026-06-13T23:09:39.777Z</li>
+</ul>
+<h2>P0/P1/P2 价值判断</h2>
+<ul>
+<li>等级：P0</li>
+<li>判断依据：它直接命中 Repository Understanding / Code Retrieval benchmark，是策略中明确要求优先处理的研究方向。</li>
+</ul>
+<h2>命中关注领域</h2>
+<ul>
+<li>Code Intelligence</li>
+<li>Software Engineering Research</li>
+<li>Evaluation Systems</li>
+<li>AI for Software Engineering</li>
+</ul>
+<h2>整体摘要</h2>
+<p>
+CORE-Bench 针对 agentic coding 场景下的 code retrieval 问题提出新的评测基准。论文指出，现有基准大多只测 docstring-to-function 或 snippet matching，无法反映 agent 在真实仓库里“从需求定位到相关文件、函数和上下文”的工作。
+</p>
+<p>
+这篇论文的价值在于把“编码代理如何探索代码库”拆成 code understanding、issue-to-edit localization、broader context retrieval 三层任务，并且用大规模标签验证传统 embedding 模型在 agentic setting 下显著掉队。
+</p>
+<h2>技术创新点分析</h2>
+<ul>
+<li><strong>面向 agentic coding 的 retrieval 定义</strong>：把 code retrieval 从 snippet matching 重定义为 requirement-driven repository search。</li>
+<li><strong>三层评测框架</strong>：同时覆盖 code understanding、issue-to-edit localization 与 broader context retrieval。</li>
+<li><strong>规模化数据构建</strong>：论文报告超过 180K queries 和 106K broader-context relevance labels，数据量足以支持后续训练与对比。</li>
+<li><strong>揭示 embedding 断层</strong>：实验显示传统 code search 到 agentic code retrieval 存在明显性能落差，说明当前仓库理解能力被高估。</li>
+</ul>
+<h2>企业场景可参考分析</h2>
+<ul>
+<li><strong>内部代码搜索/仓库理解系统</strong>：适合作为评估企业自研 retrieval、repo graph 或 embedding pipeline 的基准参考。</li>
+<li><strong>coding agent 验证</strong>：可以用类似三层框架区分“能回答代码问题”和“能定位可编辑位置”的真实差异。</li>
+<li><strong>平台采购评估</strong>：采购外部 coding agent 时，应该要求其在 repository search 任务上给出可验证数据，而不是只报 SWE-bench。</li>
+</ul>
+<h2>对客户端架构 / 代码理解 / Agent Infra / 研发效能 / 工程自动化的启示</h2>
+<ul>
+<li><strong>客户端架构</strong>：大型客户端仓库通常依赖跨模块、配置、脚本和文档的联合检索，CORE-Bench 的 broader-context 视角很贴近现实。</li>
+<li><strong>代码理解</strong>：仓库理解不应只看 patch 成功率，还要单测定位、上下文召回与局部相似干扰下的辨识能力。</li>
+<li><strong>Agent Infra</strong>：retrieval subsystem、context assembly 和 in-repo distractor filtering 是 agent runtime 的核心能力，而不是附属组件。</li>
+<li><strong>研发效能</strong>：如果检索层不准，后续编辑、测试和 review 环节都会浪费时间。</li>
+<li><strong>工程自动化</strong>：未来 repo exploration benchmark 应与 execution/eval harness 联动，而不是单独评测搜索分数。</li>
+</ul>
+<h2>风险限制</h2>
+<ul>
+<li>论文仍以 benchmark 和 embedding 实验为主，距离直接指导生产系统还有工程落地距离。</li>
+<li>是否覆盖大型私有 monorepo、跨语言代码库和复杂构建系统，还有待进一步验证。</li>
+<li>高 query 规模不等于覆盖所有真实开发任务，企业仍需补自己的任务分布。</li>
+</ul>
+<h2>后续跟进行动</h2>
+<ul>
+<li>跟踪 CORE-Bench 是否开源完整数据、评测脚本和 leaderboard。</li>
+<li>把内部常见 repo exploration 任务映射到这三层框架，补企业自定义 eval 集。</li>
+<li>关注后续是否出现基于 repo graph、hybrid retrieval 或 long-context agent 的更强基线。</li>
+</ul>
+<h2>原文依据提要</h2>
+<ul>
+<li>摘要明确指出现有 benchmark 主要评 docstring-to-function 或 snippet-level matching，无法覆盖 requirement-driven repository search。</li>
+<li>论文把评测拆成 code understanding、issue-to-edit localization 和 broader context retrieval 三个层次。</li>
+<li>作者报告数据规模超过 180K queries 与 106K broader-context labels，并观察到代表性 embedding 模型在 agentic setting 下显著掉分。</li>
+</ul>
+</main>
+</body>
+</html>

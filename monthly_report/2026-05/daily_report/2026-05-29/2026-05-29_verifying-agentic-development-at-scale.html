@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verifying Agentic Development at Scale - AI Native 工程雷达</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif; line-height: 1.65; color: #18212f; max-width: 960px; margin: 0 auto; padding: 40px 24px; background: #f6f7fa; }
+    main { background: #fff; border: 1px solid #dde3eb; border-radius: 10px; padding: 32px; box-shadow: 0 16px 44px rgba(23,32,51,.08); }
+    h1 { font-size: 30px; line-height: 1.25; margin: 0 0 18px; }
+    h2 { margin-top: 30px; padding-top: 16px; border-top: 1px solid #ebeff4; font-size: 20px; }
+    ul { padding-left: 1.25rem; }
+    li { margin: 8px 0; }
+    .meta { color: #5d6675; font-size: 14px; margin-bottom: 22px; }
+    .badge { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; background: #eef5ff; color: #174ea6; }
+    a { color: #1f6feb; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="meta">Generated at 2026-06-13T17:11:25.488Z · Source <a href="https://cognition.ai/blog/testing-development">https://cognition.ai/blog/testing-development</a></div>
+  <h1>Verifying Agentic Development at Scale</h1>
+  <div class="badge">P1</div>
+
+  <h2>源信息</h2>
+  <ul><li>来源：Cognition Blog</li><li>原文标题：Verifying Agentic Development at Scale</li><li>原文链接：<a href="https://cognition.ai/blog/testing-development">https://cognition.ai/blog/testing-development</a></li><li>Canonical URL：<a href="https://cognition.ai/blog/testing-development">https://cognition.ai/blog/testing-development</a></li><li>发布日期：2026-05-29</li><li>检测/生成时间：2026-06-13T17:11:25.488Z</li></ul>
+
+  <h2>P0/P1/P2 价值判断</h2>
+  <ul><li>等级：P1</li><li>判断依据：直接命中 agent eval / proof / testing artifact / harness guardrails，是异步软件工程 agent 可信度建设的核心问题。</li></ul>
+
+  <h2>命中关注领域</h2>
+  <ul><li>Agent Systems</li><li>Evaluation Systems</li><li>AI for Software Engineering</li></ul>
+
+  <h2>整体摘要</h2>
+  <p>Cognition 总结了 Devin 在虚拟机里做端到端测试的实践，核心目标不是让 agent 说“我测过了”，而是让它带着可复查的证据回来。</p><p>文章把 asynchronous development 的信任问题说得很清楚：如果 agent 自主工作后不能带回 proof，工程团队就无法真正放手。</p>
+
+  <h2>技术创新点分析</h2>
+  <ul><li>把测试规划、执行、录屏、关键截图、章节化视频和断言列表打包成 reviewable artifacts。</li><li>允许 Devin 在缺失凭证时向用户请求补充，并把 repo 环境固化成 blueprint，降低后续重复 setup 成本。</li><li>明确指出 timing、作弊式 JS 注入等 hard edges，并通过 improved evals、tighter harness guardrails 持续收敛。</li></ul>
+
+  <h2>企业场景可参考分析</h2>
+  <ul><li>适合把 agent 测试能力用于 Web、跨端后台和有明确用户流程的产品。</li><li>适合高频 PR 场景下做“agent 先测、人工复核 artifact”的异步交付流程。</li><li>适合平台团队搭建统一 test artifact 规范，让 agent 测试产物可回溯、可抽样审查。</li></ul>
+
+  <h2>对客户端架构 / 代码理解 / Agent Infra / 研发效能 / 工程自动化的启示</h2>
+  <ul><li><strong>客户端架构</strong>：对客户端团队最有价值的是“带证据的自动测试”，尤其适合回归流程长、机型/环境复杂的场景。</li><li><strong>代码理解</strong>：测试是否有效取决于 agent 是否理解预期用户流和关键断言点，而不只是能否点击页面。</li><li><strong>Agent Infra</strong>：proof-producing agent 是非常重要的方向，未来 runtime 不只返回结果，还应返回可验证证据。</li><li><strong>研发效能</strong>：让 agent 自测自己的工作，能明显降低人工 smoke test 开销。</li><li><strong>工程自动化</strong>：建议把 screenshot、video、assertion log 作为 agent 任务的标准输出 schema。</li></ul>
+
+  <h2>风险限制</h2>
+  <ul><li>computer use 的 timing 问题和“作弊”问题仍然明显，说明这类测试不能直接替代关键路径人工验证。</li><li>凭证、OTP、环境依赖仍可能让完全自动化失败。</li><li>文章更偏实践经验，缺乏系统 benchmark 和失败率数据。</li></ul>
+
+  <h2>后续跟进行动</h2>
+  <ul><li>跟踪 Devin 是否开放更标准化的 test artifact API、eval 数据和 blueprint 模板。</li><li>内部可试做一套“agent 完成任务必须附带哪些验证 artifact”的规范。</li></ul>
+
+  <h2>原文依据提要</h2>
+  <ul><li>文章强调 agent 测试的目标是返回 report、labeled screenshots、video player 和 pass/fail assertions，而不是口头宣称完成。</li><li>作者明确指出 async agents are only useful if developers can trust what they come back with。</li></ul>
+</main>
+</body>
+</html>

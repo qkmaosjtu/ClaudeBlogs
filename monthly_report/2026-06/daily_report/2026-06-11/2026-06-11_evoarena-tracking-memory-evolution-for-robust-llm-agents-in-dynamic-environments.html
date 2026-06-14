@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments - AI Native 工程雷达</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif; line-height: 1.65; color: #18212f; max-width: 960px; margin: 0 auto; padding: 40px 24px; background: #f6f7fa; }
+    main { background: #fff; border: 1px solid #dde3eb; border-radius: 10px; padding: 32px; box-shadow: 0 16px 44px rgba(23,32,51,.08); }
+    h1 { font-size: 30px; line-height: 1.25; margin: 0 0 18px; }
+    h2 { margin-top: 30px; padding-top: 16px; border-top: 1px solid #ebeff4; font-size: 20px; }
+    ul { padding-left: 1.25rem; }
+    li { margin: 8px 0; }
+    .meta { color: #5d6675; font-size: 14px; margin-bottom: 22px; }
+    .badge { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; background: #eef5ff; color: #174ea6; }
+    a { color: #1f6feb; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="meta">Generated at 2026-06-13T20:09:46.288Z · Source <a href="https://arxiv.org/abs/2606.13681">https://arxiv.org/abs/2606.13681</a></div>
+  <h1>EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments</h1>
+  <div class="badge">P1</div>
+
+  <h2>源信息</h2>
+  <ul><li>来源：arXiv</li><li>原文标题：EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments</li><li>原文链接：<a href="https://arxiv.org/abs/2606.13681">https://arxiv.org/abs/2606.13681</a></li><li>Canonical URL：<a href="https://arxiv.org/abs/2606.13681">https://arxiv.org/abs/2606.13681</a></li><li>发布日期：2026-06-11</li><li>检测/生成时间：2026-06-13T20:09:46.288Z</li><li>作者/来源：Jundong Xu, Qingchuan Li, Jiaying Wu, Yihuai Lan, Shuyue Stella Li, Huichi Zhou, Bowen Jiang, Lei Wang, Jun Wang, Anh Tuan Luu, Caiming Xiong, Hae Won Park, Bryan Hooi, Zhiyuan Hu</li></ul>
+
+  <h2>P0/P1/P2 价值判断</h2>
+  <ul><li>等级：P1</li><li>判断依据：论文直接命中 dynamic-agent evaluation 与 memory design，且评测域包含 terminal / software 环境，和生产级 agent 可靠性高度相关。</li><li>降权/过滤说明：不是业务应用层 agent 文章；重点是 benchmark 与 memory paradigm。</li></ul>
+
+  <h2>命中关注领域</h2>
+  <ul><li>Evaluation Systems</li><li>Agent Systems</li><li>Software Engineering Research</li></ul>
+
+  <h2>整体摘要</h2>
+  <p>EvoArena 指出一个被静态 benchmark 掩盖的问题：真实部署中的 agent 面对的是持续变化的环境，而不是一次性、不会漂移的任务上下文。</p><p>为此，论文提出一个覆盖 terminal、software 和 social domains 的动态评测集，并配套 EvoMem 这种 patch-based memory 机制，把 memory 视为可演化的更新历史而非固定摘要。</p>
+
+  <h2>技术创新点分析</h2>
+  <ul><li>把环境变化建模成 progressive updates，而不是静态任务列表，更贴近长期运行 agent 的真实操作面。</li><li>提出 EvoMem，用 structured update histories 记录 memory evolution，让 agent 能基于“变化”而不是单点记忆做推理。</li><li>实验显示现有 agents 在 EvoArena 上平均准确率只有 39.6%，说明 dynamic-environment robustness 明显不足。</li><li>EvoMem 在 EvoArena 上带来 1.5% 平均提升，同时也提升 GAIA 与 LoCoMo，说明这类 memory 设计并非只对单一 benchmark 有效。</li><li>链式任务准确率提升 3.7%，意味着 memory evolution 对连续相关子任务尤为重要。</li></ul>
+
+  <h2>企业场景可参考分析</h2>
+  <ul><li>适合评估那些会跨多轮、跨多天、跨外部系统执行的工程代理，例如巡检、SRE 辅助、持续重构和长期 bug triage。</li><li>适合平台团队把“环境变化感知能力”纳入 eval，而不是只测单次任务完成率。</li><li>适合需要长期 memory 的组织把 session memory 设计为可审计的 patch log，而不是只保留压缩摘要。</li></ul>
+
+  <h2>对客户端架构 / 代码理解 / Agent Infra / 研发效能 / 工程自动化的启示</h2>
+  <ul><li>客户端架构：客户端工程代理经常面对 SDK 版本、构建配置、依赖和测试环境变化，静态记忆不足以支撑稳定自动化。</li><li>代码理解：仓库理解如果不建模“变化历史”，agent 很容易在长期任务中引用过期上下文。</li><li>Agent Infra：memory schema 应更像 event log / patch stream，而不是一段最终摘要。</li><li>研发效能：长期自治 agent 的失败常来自环境漂移而非单次推理错误，因此 eval 体系也要转向 drift-aware。</li><li>工程自动化：建议把环境更新事件、配置变化和外部依赖变化作为 runtime 一等输入，而非隐藏在日志里。</li></ul>
+
+  <h2>风险限制</h2>
+  <ul><li>论文尚在 arXiv 阶段，尚未经过正式同行评审。</li><li>性能提升幅度在 EvoArena 上相对温和，企业落地前仍需验证是否能转化为更低的生产失败率。</li><li>评测域虽包含 software/terminal，但并不等同于真实企业仓库与 CI 环境的全部复杂度。</li></ul>
+
+  <h2>后续跟进行动</h2>
+  <ul><li>跟踪论文是否开源 benchmark、memory format 或后续更贴近仓库工程场景的复现实验。</li><li>内部若有长期运行 agent，可补充 drift-aware eval：配置变化后任务是否仍能连续成功。</li></ul>
+
+  <h2>原文依据提要</h2>
+  <ul><li>摘要明确指出多数 benchmark 假设静态环境，而真实部署 inherently dynamic。</li><li>论文提出覆盖 terminal、software、social domains 的 EvoArena，以及 patch-based memory 范式 EvoMem。</li><li>摘要给出 39.6% 平均准确率、EvoArena 上 1.5% 提升、GAIA/LoCoMo 分别提升 6.1%/4.8%、chain-level accuracy 提升 3.7%。</li></ul>
+</main>
+</body>
+</html>

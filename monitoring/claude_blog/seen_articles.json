@@ -2,7 +2,7 @@
   "source": "https://claude.com/blog",
   "baseline_captured_at": "2026-06-13T18:56:21+08:00",
   "baseline_cutoff_note": "Treat Claude blog posts published before this capture as pre-existing unless the user explicitly requests backfill.",
-  "last_checked_at": "2026-06-13T13:58:43Z",
+  "last_checked_at": "2026-06-13T17:11:25.488Z",
   "current_frontier": {
     "title": "The evolution of agentic surfaces: building with Claude Managed Agents",
     "url": "https://claude.com/blog/building-with-claude-managed-agents",
